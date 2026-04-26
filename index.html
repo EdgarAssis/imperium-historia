@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Imperium Historia</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.8.5/d3.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/topojson/3.0.2/topojson.min.js"></script>
+</head>
+<body>
+  <div id="loading" aria-live="polite">
+    <div id="loading-text">A CARREGAR...</div>
+    <div class="loading-bar"><div class="loading-fill"></div></div>
+  </div>
+  <div id="notif" role="status" aria-live="polite"></div>
+
+  <section id="desc-screen" class="screen screen-active">
+    <div class="desc-hero">
+      <div class="brand-mark">Imperium Historia</div>
+      <h1>IMPERIUM HISTORIA</h1>
+      <p class="desc-sub">Estratégia histórica em texto livre, mapa vivo e diplomacia narrativa.</p>
+      <p class="desc-copy">
+        Assume uma nação, escreve ordens em linguagem natural, negocia com líderes históricos
+        e vê o mundo reagir por turnos. A base local funciona mesmo sem chave de IA.
+      </p>
+      <div class="hero-actions">
+        <button class="btn btn-muted" id="btn-load-hero" type="button">CONTINUAR</button>
+        <button class="btn btn-primary" id="btn-play" type="button">JOGAR AGORA</button>
+      </div>
+    </div>
+    <div class="desc-pillars">
+      <article>
+        <span>Mapa</span>
+        <strong>Geopolítica clicável</strong>
+        <p>Seleciona países, acompanha relações e muda camadas políticas, económicas e militares.</p>
+      </article>
+      <article>
+        <span>Ordens</span>
+        <strong>Texto livre</strong>
+        <p>Escreve reformas, guerras, pactos e projetos nacionais sem ficar preso a menus.</p>
+      </article>
+      <article>
+        <span>Turnos</span>
+        <strong>Relatórios jogáveis</strong>
+        <p>Cada avanço resume população, mundo, vizinhos, tesouro e impactos nos indicadores.</p>
+      </article>
+    </div>
+  </section>
+
+  <section id="setup-screen" class="screen">
+    <div class="setup-wrap">
+      <header class="setup-header">
+        <button class="icon-text" id="btn-back-desc" type="button">← VOLTAR</button>
+        <div>
+          <h2>Escolher Cenário</h2>
+          <p>Seleciona uma nação e uma era, ou cria uma partida personalizada.</p>
+        </div>
+      </header>
+      <div id="scenario-list" class="scenario-list"></div>
+      <div class="setup-grid">
+        <label>
+          <span>Nação personalizada</span>
+          <input id="custom-nation" type="text" placeholder="Ex: Império Romano, Reino Zulu">
+        </label>
+        <label>
+          <span>Ano de início</span>
+          <input id="custom-year" type="number" placeholder="Ex: 1066" min="-500" max="2200">
+        </label>
+      </div>
+      <button class="btn btn-primary" id="btn-start" type="button">INICIAR REINADO</button>
+    </div>
+  </section>
+
+  <main id="game-screen" class="screen game-screen">
+  <header id="topbar">
+    <div id="game-title">IMPERIUM</div>
+
+    <div class="top-stat"><span>Nação</span><strong id="stat-nation">—</strong></div>
+    <div class="top-stat"><span>Ano</span><strong id="stat-year">—</strong></div>
+    <div class="top-stat"><span>PIB</span><strong id="stat-gdp">—</strong></div>
+    <div class="top-stat"><span>Estab.</span><strong id="stat-stab">—</strong></div>
+    <div class="top-stat"><span>Militar</span><strong id="stat-mil">—</strong></div>
+    <div class="top-stat"><span>Tesouro</span><strong id="stat-treasury">—</strong></div>
+
+    <!-- 💱 SISTEMA MONETÁRIO -->
+    <div class="top-stat"><span>Moeda</span><strong id="stat-currency">—</strong></div>
+    <div class="top-stat"><span>Inflação</span><strong id="stat-inflation">—</strong></div>
+    <div class="top-stat"><span>Juros</span><strong id="stat-interest">—</strong></div>
+
+    <div id="top-actions">
+      <button class="top-btn" id="btn-new-game" type="button">NOVO</button>
+      <button class="top-btn" id="btn-save" type="button">SALVAR</button>
+      <button class="top-btn" id="btn-load" type="button">CARREGAR</button>
+
+      <!-- 🏦 BANCO CENTRAL -->
+      <button class="top-btn" id="btn-rate-up" type="button">⬆️ Juros</button>
+      <button class="top-btn" id="btn-rate-down" type="button">⬇️ Juros</button>
+
+      <button class="btn-turn" id="btn-turn" type="button">
+        TURNO <span id="turn-num">1</span> ▶
+      </button>
+    </div>
+  </header>
+
+    <div id="main-layout">
+      <aside id="left-panel">
+        <section class="panel-block nation-block">
+          <div id="nation-flag">🇵🇹</div>
+          <div>
+            <h2 id="nation-name">Portugal</h2>
+            <p id="nation-era">Século XV</p>
+            <p id="nation-gov">Monarquia</p>
+          </div>
+        </section>
+        <section class="panel-block">
+          <div class="panel-title">Indicadores de Estado</div>
+          <div id="stats-list"></div>
+        </section>
+        <section class="panel-block">
+          <div class="panel-title">Investimentos Nacionais</div>
+          <div id="invest-list" class="invest-list"></div>
+        </section>
+        <section class="panel-block events-block">
+          <div class="panel-title">Crises & Oportunidades</div>
+          <div id="events-list"></div>
+        </section>
+        <section class="panel-block log-block">
+          <div class="panel-title">Crónicas do Reinado</div>
+          <div id="action-log"></div>
+        </section>
+      </aside>
+
+      <section id="map-area">
+        <div id="layer-selector">
+          <button class="layer-btn active" data-layer="political" type="button">Político</button>
+          <button class="layer-btn" data-layer="economy" type="button">Economia</button>
+          <button class="layer-btn" data-layer="military" type="button">Militar</button>
+        </div>
+        <svg id="map-svg" aria-label="Mapa-múndi diplomático"></svg>
+        <div id="map-fallback" hidden></div>
+        <div id="map-tooltip" role="status">
+          <strong id="tt-name">—</strong>
+          <span id="tt-rel">—</span>
+          <em id="tt-leader">—</em>
+        </div>
+        <div id="map-controls">
+          <button class="map-btn" id="btn-zoom-in" type="button" title="Aproximar">+</button>
+          <button class="map-btn" id="btn-zoom-out" type="button" title="Afastar">−</button>
+          <button class="map-btn" id="btn-zoom-reset" type="button" title="Repor mapa">⌂</button>
+        </div>
+        <div id="map-legend">
+          <span><i class="legend-player"></i>Sua nação</span>
+          <span><i class="legend-ally"></i>Aliado</span>
+          <span><i class="legend-rival"></i>Rival</span>
+          <span><i class="legend-hostile"></i>Hostil</span>
+        </div>
+      </section>
+
+      <aside id="right-panel">
+        <nav id="right-tabs">
+          <button class="rtab active" data-tab="diplo" type="button">Diplomacia</button>
+          <button class="rtab" data-tab="world" type="button">Mundo</button>
+          <button class="rtab" data-tab="intel" type="button">Inteligência</button>
+          <button class="rtab" data-tab="treaties" type="button">Tratados</button>
+        </nav>
+        <section class="rpanel active" id="tab-diplo">
+          <header id="diplo-header">
+            <span id="diplo-flag">🌍</span>
+            <div>
+              <strong id="diplo-name">Diplomacia</strong>
+              <small id="diplo-hint">Seleciona um país</small>
+            </div>
+          </header>
+          <div id="diplo-messages"></div>
+          <form id="diplo-form" class="input-stack">
+            <select id="diplo-select"></select>
+            <textarea id="diplo-input" placeholder="A tua mensagem diplomática..."></textarea>
+            <button class="btn btn-secondary" id="btn-diplo" type="submit">ENVIAR MENSAGEM</button>
+          </form>
+        </section>
+        <section class="rpanel" id="tab-world">
+          <div id="world-content" class="scroll-pane"></div>
+        </section>
+        <section class="rpanel" id="tab-intel">
+          <div id="intel-content" class="scroll-pane"></div>
+        </section>
+        <section class="rpanel" id="tab-treaties">
+          <div id="treaties-content" class="scroll-pane"></div>
+        </section>
+      </aside>
+    </div>
+
+    <form id="action-area">
+      <label for="action-input">Ordem Real — o que ordenas?</label>
+      <textarea id="action-input" placeholder="Ex: Envio uma frota para explorar a costa africana..."></textarea>
+      <div class="action-row">
+        <button type="button" class="suggestion">Explorar territórios</button>
+        <button type="button" class="suggestion">Negociar tratado</button>
+        <button type="button" class="suggestion">Reforma económica</button>
+        <button type="button" class="suggestion">Declarar guerra</button>
+        <button type="button" class="suggestion">Construir frota naval</button>
+        <button id="btn-action" class="btn btn-primary" type="submit">EXECUTAR ▶</button>
+      </div>
+      <div id="save-status"></div>
+    </form>
+  </main>
+
+  <div id="report-modal" class="modal" hidden>
+    <section id="report-box" role="dialog" aria-modal="true" aria-labelledby="report-title">
+      <header>
+        <h2 id="report-title">Relatório do Turno</h2>
+        <button id="btn-close-report" type="button">FECHAR ×</button>
+      </header>
+      <div id="report-body"></div>
+    </section>
+  </div>
+
+  <script type="module" src="/js/app.js"></script>
+</body>
+</html>
