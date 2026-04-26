@@ -1,5 +1,6 @@
 export async function requestAI({ system, messages, maxTokens = 1400 }) {
-  const response = await fetch('/api/ai/message', {
+  // Ajustado para a pasta correta da Vercel
+  const response = await fetch('/api/message', {
     method: 'POST',
     headers: { 'content-type': 'application/json' },
     body: JSON.stringify({ system, messages, maxTokens }),
@@ -7,8 +8,7 @@ export async function requestAI({ system, messages, maxTokens = 1400 }) {
 
   const data = await response.json().catch(() => ({}));
   if (!response.ok || data.error) {
-    const error = new Error(data.error || `Pedido de IA falhou com HTTP ${response.status}.`);
-    error.fallback = Boolean(data.fallback);
+    const error = new Error(data.error || `Erro na ligação à IA.`);
     throw error;
   }
 
