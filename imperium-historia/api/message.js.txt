@@ -1,0 +1,17 @@
+// api/message.js
+export default async function handler(req, res) {
+  const { system, messages } = req.body;
+  
+  // Aqui ligas à API (Gemini ou Anthropic)
+  const response = await fetch('URL_DA_API', {
+    method: 'POST',
+    headers: { 
+      'Content-Type': 'application/json',
+      'x-api-key': process.env.MY_API_KEY // A chave fica escondida na Vercel
+    },
+    body: JSON.stringify({ system, messages })
+  });
+
+  const data = await response.json();
+  res.status(200).json({ text: data.content[0].text });
+}
