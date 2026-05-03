@@ -299,40 +299,6 @@ export function calculateCurrencyStrength(state) {
 }
 
 /* =========================
-   💱 SISTEMA MONETÁRIO
-========================= */
-
-export function updateMonetarySystem(state) {
-  const { gold, debt } = state;
-
-  /* 🔥 FORÇA DA MOEDA */
-  let strength = 50;
-
-  strength += gold * 0.05;      // ouro fortalece
-  strength -= debt * 0.03;      // dívida enfraquece
-  strength += state.stats.economy * 0.3;
-
-  state.currency.strength = clamp(Math.floor(strength), 0, 100);
-
-  /* 🔥 INFLAÇÃO */
-  let inflation = 2;
-
-  if (state.treasury > state.stats.economy * 5) {
-    inflation += 2; // dinheiro a mais
-  }
-
-  if (debt > 100) {
-    inflation += 3;
-  }
-
-  if (gold > debt) {
-    inflation -= 1; // ouro estabiliza
-  }
-
-  state.currency.inflation = clamp(Math.floor(inflation), 0, 20);
-}
-
-/* =========================
    🏦 BANCO CENTRAL
 ========================= */
 
