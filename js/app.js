@@ -1,8 +1,7 @@
 import { SCENARIOS } from './data.js';
 import { requestAI } from './ai.js';
-import { applyMaintenance, applyDebt, aiTakeDecision, updateEconomicCrisis } from './simulation.js';
+import { applyMaintenance, applyDebt, aiTakeDecision, updateEconomicCrisis, updateMonetarySystem } from './simulation.js';
 import { runWorldAI } from './simulation.js';
-import { updateMonetarySystem } from './simulation.js';
 import { applyMonetaryPolicy } from './simulation.js';
 import { runAdvancedWorldAI } from './simulation.js';
 import { requestAlliance, processDiplomacy } from './simulation.js';
