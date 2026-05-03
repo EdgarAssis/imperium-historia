@@ -60,6 +60,24 @@ export const TREATY_TYPES = {
   },
 };
 
+export function treatySummary(country) {
+  if (!country || !country.treaties || country.treaties.length === 0) {
+    return "Nenhum tratado ativo.";
+  }
+
+  return country.treaties
+    .map(t => {
+      if (typeof t === "string") return t;
+
+      const name = t.type || "Tratado";
+      const status = t.status || "ativo";
+
+      return `${name} (${status})`;
+    })
+    .join(", ");
+}
+
+
 /* =========================
    📈 PIB + ECONOMIA
 ========================= */
