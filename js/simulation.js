@@ -418,7 +418,6 @@ export function updateMonetarySystem(state) {
   state.currency.inflation = clamp(Math.floor(inflation), 0, 50);
 }
 
-
 export function runAdvancedWorldAI(state) {
   if (!state.world) state.world = {};
 
@@ -468,6 +467,10 @@ export function runAdvancedWorldAI(state) {
         result: `${iso} está a preparar conflito.`,
       });
     }
+  } // <-- A chaveta que faltava para fechar o ciclo "for"
+} // <-- A chaveta que faltava para fechar a função "runAdvancedWorldAI"
+
+
 export function advanceTreaties(state) {
   if (!state.treaties || state.treaties.length === 0) return [];
 
@@ -507,6 +510,4 @@ export function advanceTreaties(state) {
   });
 
   return expired;
-}
-  }
 }
