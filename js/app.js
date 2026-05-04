@@ -340,7 +340,7 @@ function handleInvestment(stat) {
 }
 
 function handleEventChoice(eventId, choiceId) {
-  const result = applyEventChoice(state, eventId, choiceId);
+  const result = applyEventChoice(state, choiceId);
   if (!result.ok) {
     notify(result.message);
     return;
