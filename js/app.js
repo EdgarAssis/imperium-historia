@@ -8,7 +8,6 @@ import { runAdvancedWorldAI } from './simulation.js';
 import { requestAlliance, processDiplomacy } from './simulation.js';
 import { resolveWars, declareWar } from './simulation.js';
 import { saveGame, loadSavedGame, hasSavedGame } from './save.js';
-import { worldAI } from './simulation.js';
 import { createState, getCountryInfo, makeSerializableState, sanitizeState, setRelation } from './state.js';
 import {
   applyInvestment,
