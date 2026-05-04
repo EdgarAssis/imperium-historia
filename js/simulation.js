@@ -599,3 +599,48 @@ Estabilidade: ${state.stats.stability}
 Responde de forma narrativa e estratégica.
 `;
 }
+
+/* =========================
+   🧠 PROMPTS IA
+========================= */
+
+export function buildInitialEventsPrompt(state) {
+  return `
+Cria 3 eventos históricos para ${state.nation} no ano ${state.year}.
+
+Formato JSON:
+[
+  {
+    "title": "Título",
+    "description": "Descrição",
+    "choices": [
+      {
+        "text": "Escolha",
+        "effects": { "economy": 2 }
+      }
+    ]
+  }
+]
+
+Sem texto fora do JSON.
+`;
+}
+
+export function buildReportPrompt(state) {
+  return `
+Gera um relatório do turno para ${state.nation}.
+
+Inclui:
+- resumo do país
+- situação mundial
+- mudanças de stats
+
+Formato JSON:
+{
+  "summary": "...",
+  "statsChange": {
+    "economy": 1
+  }
+}
+`;
+}
