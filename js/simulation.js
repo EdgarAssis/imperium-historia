@@ -90,12 +90,8 @@ export function calculateGDP(state) {
     (state.stats.technology / 50);
 
   const penalty = state.lastInvestmentCost || 0;
-  return Math.max(0, baseGDP - penalty);
-
-  /* 🔥 INVESTIMENTO REDUZ PIB TEMPORARIAMENTE */
-  const investmentPenalty = state.lastInvestmentCost || 0;
-
-  return Math.max(0, Math.floor(baseGDP - investmentPenalty));
+  const penalty = state.lastInvestmentCost || 0;
+  return Math.max(0, Math.floor(baseGDP - penalty));
 }
 
 export function calculateIncome(state) {
@@ -176,7 +172,6 @@ export function applyInvestment(state, stat) {
     result: `${investment.label} melhorado`
   };
 
-  state.lastInvestmentCost = (state.lastInvestmentCost || 0) + realCost;
 
 }
 
