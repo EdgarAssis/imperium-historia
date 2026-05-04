@@ -1,5 +1,4 @@
 import { clamp, normalizeText, randomInt, sentence } from './utils.js';
-declareWar(state, state.nation, iso);
 
 /* =========================
    📊 STATS
