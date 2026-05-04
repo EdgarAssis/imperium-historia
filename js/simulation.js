@@ -468,5 +468,45 @@ export function runAdvancedWorldAI(state) {
         result: `${iso} está a preparar conflito.`,
       });
     }
+export function advanceTreaties(state) {
+  if (!state.treaties || state.treaties.length === 0) return [];
+
+  const expired = [];
+
+  state.treaties = state.treaties.filter(treaty => {
+    // se não tiver duração, mantém
+    if (!treaty.expiresTurn) return true;
+
+    // expirou
+    if (state.turn >= treaty.expiresTurn) {
+      treaty.status = "expired";
+
+      expired.push({
+        name: treaty.type || "Tratado",
+        target: treaty.target || "Desconhecido"
+      });
+
+      return false; // remove da lista ativa
+    }
+
+    // ainda ativo → aplicar efeitos
+    if (treaty.effects) {
+      for (const stat in treaty.effects) {
+        state.stats[stat] = clamp(
+          state.stats[stat] + treaty.effects[stat]
+        );
+      }
+    }
+
+    // renda
+    if (treaty.income) {
+      state.treasury += treaty.income;
+    }
+
+    return true;
+  });
+
+  return expired;
+}
   }
 }
