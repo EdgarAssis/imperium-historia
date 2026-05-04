@@ -90,7 +90,7 @@ export function calculateGDP(state) {
     (state.stats.technology / 50);
 
   const penalty = state.lastInvestmentCost || 0;
-  const penalty = state.lastInvestmentCost || 0;
+
   return Math.max(0, Math.floor(baseGDP - penalty));
 }
 
