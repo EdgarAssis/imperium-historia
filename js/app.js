@@ -1,5 +1,6 @@
 import { SCENARIOS } from './data.js';
 import { requestAI } from './ai.js';
+import { clamp } from './utils.js';
 import { applyMaintenance, applyDebt, aiTakeDecision, updateEconomicCrisis, updateMonetarySystem } from './simulation.js';
 import { runWorldAI } from './simulation.js';
 import { applyMonetaryPolicy } from './simulation.js';
