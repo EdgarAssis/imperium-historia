@@ -582,3 +582,20 @@ export function applyEventChoice(state, choiceIndex) {
   /* 🔥 LIMPAR EVENTO */
   state.activeEvent = null;
 }
+
+export function buildGameSystem(state) {
+  return `
+És um simulador histórico.
+
+Estado atual:
+Nação: ${state.nation}
+Ano: ${state.year}
+
+Economia: ${state.stats.economy}
+Militar: ${state.stats.military}
+Diplomacia: ${state.stats.diplomacy}
+Estabilidade: ${state.stats.stability}
+
+Responde de forma narrativa e estratégica.
+`;
+}
