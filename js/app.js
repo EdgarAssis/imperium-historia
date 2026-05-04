@@ -505,7 +505,7 @@ function setBusy(busy) {
   setButtonBusy(qs('#btn-diplo'), busy);
 }
 
-export function advanceTreaties(state) {
+  /* 🔥 export function advanceTreaties(state) {
   if (!state.treaties || state.treaties.length === 0) return [];
 
   const expired = [];
@@ -544,4 +544,4 @@ export function advanceTreaties(state) {
   });
 
   return expired;
-}
+}*/
