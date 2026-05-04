@@ -1,4 +1,5 @@
 import { clamp, normalizeText, randomInt, sentence } from './utils.js';
+declareWar(state, state.nation, iso);
 
 /* =========================
    📊 STATS
@@ -510,4 +511,75 @@ export function advanceTreaties(state) {
   });
 
   return expired;
+}
+
+export function applyEventChoice(state, choiceIndex) {
+  if (!state.activeEvent || !state.activeEvent.choices) return;
+
+  const choice = state.activeEvent.choices[choiceIndex];
+  if (!choice) return;
+
+  /* 🔥 APLICAR EFEITOS NAS STATS */
+  if (choice.effects) {
+    for (const stat in choice.effects) {
+      state.stats[stat] = clamp(
+        state.stats[stat] + choice.effects[stat]
+      );
+    }
+  }
+
+  /* 💰 IMPACTO ECONÓMICO */
+  if (choice.treasury) {
+    state.treasury += choice.treasury;
+  }
+
+  if (choice.debt) {
+    state.debt += choice.debt;
+  }
+
+  /* 💱 IMPACTO MONETÁRIO */
+  if (choice.inflation) {
+    state.currency.inflation = clamp(
+      state.currency.inflation + choice.inflation,
+      0,
+      50
+    );
+  }
+
+  /* 🤝 RELAÇÕES INTERNACIONAIS */
+  if (choice.relations) {
+    for (const iso in choice.relations) {
+      if (!state.relations[iso]) {
+        state.relations[iso] = { value: 0, status: "neutral" };
+      }
+
+      state.relations[iso].value += choice.relations[iso];
+
+      // atualizar status automaticamente
+      const v = state.relations[iso].value;
+
+      state.relations[iso].status =
+        v > 80 ? "ally" :
+        v > 50 ? "friendly" :
+        v > 0 ? "neutral" :
+        v > -50 ? "cold" :
+        "hostile";
+    }
+  }
+
+  /* ⚔️ EVENTO PODE GERAR GUERRA */
+  if (choice.war) {
+    declareWar(state, state.nation, choice.war);
+  }
+
+  /* 📜 HISTÓRICO */
+  state.history.push({
+    turn: state.turn,
+    year: state.year,
+    action: `Evento: ${state.activeEvent.title}`,
+    result: `Escolheste: ${choice.text}`
+  });
+
+  /* 🔥 LIMPAR EVENTO */
+  state.activeEvent = null;
 }
