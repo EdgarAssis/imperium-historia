@@ -654,3 +654,65 @@ export function clampStats(stats) {
 
   return result;
 }
+
+
+/* =========================
+   ⚔️ SISTEMA DE GUERRA
+========================= */
+
+export function declareWar(state, attacker, defender) {
+  if (!state.wars) state.wars = [];
+
+  state.wars.push({
+    attacker,
+    defender,
+    progress: 0
+  });
+
+  state.history.push({
+    turn: state.turn,
+    year: state.year,
+    action: "Guerra",
+    result: `${attacker} declarou guerra a ${defender}`
+  });
+}
+
+export function resolveWars(state) {
+  if (!state.wars) return;
+
+  state.wars = state.wars.filter(war => {
+    const atk = state.stats.military + Math.random() * 20;
+    const def = 50 + Math.random() * 20;
+
+    war.progress += atk - def;
+
+    if (war.progress > 100) {
+      state.relations[war.defender] = {
+        value: 100,
+        status: "owned"
+      };
+
+      state.history.push({
+        turn: state.turn,
+        year: state.year,
+        action: "Conquista",
+        result: `${war.defender} foi conquistado`
+      });
+
+      return false;
+    }
+
+    if (war.progress < -100) {
+      state.history.push({
+        turn: state.turn,
+        year: state.year,
+        action: "Derrota",
+        result: `Falhaste contra ${war.defender}`
+      });
+
+      return false;
+    }
+
+    return true;
+  });
+}
