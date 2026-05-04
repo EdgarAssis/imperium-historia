@@ -639,3 +639,18 @@ Formato JSON:
 }
 `;
 }
+
+
+/* =========================
+   📊 NORMALIZAR STATS
+========================= */
+
+export function clampStats(stats) {
+  const result = {};
+
+  for (const key in stats) {
+    result[key] = clamp(stats[key], 0, 100);
+  }
+
+  return result;
+}
