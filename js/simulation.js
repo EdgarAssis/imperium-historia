@@ -811,3 +811,23 @@ export function fallbackEvents(state) {
     }
   ];
 }
+/* =========================
+   📄 RELATÓRIO FALLBACK
+========================= */
+
+export function fallbackReport(state) {
+  return {
+    summary: `
+${state.nation} continua no ano ${state.year} com uma economia de nível ${state.stats.economy},
+capacidade militar ${state.stats.military}
+e estabilidade ${state.stats.stability}.
+`,
+
+    statsChange: {
+      economy: 0,
+      military: 0,
+      diplomacy: 0,
+      stability: 0
+    }
+  };
+}
