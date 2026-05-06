@@ -754,3 +754,60 @@ export function fallbackDiplomacy(state, countryName, message) {
   // resposta genérica
   return `${countryName} recebeu a tua mensagem e irá analisá-la cuidadosamente.`;
 }
+
+/* =========================
+   🎲 EVENTOS FALLBACK
+========================= */
+
+export function fallbackEvents(state) {
+  return [
+    {
+      title: "Crise Económica",
+      description: "A inflação e o desemprego estão a preocupar a população.",
+
+      choices: [
+        {
+          text: "Investir na economia",
+          effects: {
+            economy: 5,
+            stability: 2
+          },
+          treasury: -20
+        },
+
+        {
+          text: "Aumentar impostos",
+          effects: {
+            economy: -2,
+            stability: -3
+          },
+          treasury: 15
+        }
+      ]
+    },
+
+    {
+      title: "Tensões Militares",
+      description: "Países vizinhos aumentaram presença militar nas fronteiras.",
+
+      choices: [
+        {
+          text: "Mobilizar exército",
+          effects: {
+            military: 5,
+            stability: -1
+          },
+          treasury: -15
+        },
+
+        {
+          text: "Negociar diplomaticamente",
+          effects: {
+            diplomacy: 4,
+            stability: 1
+          }
+        }
+      ]
+    }
+  ];
+}
