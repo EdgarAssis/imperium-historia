@@ -831,3 +831,117 @@ e estabilidade ${state.stats.stability}.
     }
   };
 }
+
+
+/* =========================
+   🤝 PEDIDOS DE ALIANÇA
+========================= */
+
+export function requestAlliance(state, iso) {
+  if (!state.pendingDiplomacy) {
+    state.pendingDiplomacy = [];
+  }
+
+  state.pendingDiplomacy.push({
+    type: "alliance",
+    target: iso,
+    turn: state.turn
+  });
+
+  state.history.push({
+    turn: state.turn,
+    year: state.year,
+    action: "Diplomacia",
+    result: `Pedido de aliança enviado para ${iso}`
+  });
+}
+
+export function processDiplomacy(state) {
+  if (!state.pendingDiplomacy) return;
+
+  state.pendingDiplomacy = state.pendingDiplomacy.filter(req => {
+
+    if (state.turn <= req.turn) return true;
+
+    const accepted = Math.random() < 0.6;
+
+    if (accepted) {
+      state.relations[req.target] = {
+        value: 80,
+        status: "ally"
+      };
+
+      state.history.push({
+        turn: state.turn,
+        year: state.year,
+        action: "Aliança",
+        result: `${req.target} aceitou a aliança`
+      });
+
+    } else {
+      state.history.push({
+        turn: state.turn,
+        year: state.year,
+        action: "Diplomacia",
+        result: `${req.target} recusou a aliança`
+      });
+    }
+
+    return false;
+  });
+}
+
+/* =========================
+   🧠 JSON / IA
+========================= */
+
+export function parseJsonFromText(text) {
+  try {
+    const match = text.match(/\{[\s\S]*\}|\[[\s\S]*\]/);
+
+    if (!match) return null;
+
+    return JSON.parse(match[0]);
+
+  } catch {
+    return null;
+  }
+}
+
+export function normalizeEvents(events) {
+  if (!Array.isArray(events)) return [];
+
+  return events.map(event => ({
+    title: event.title || "Evento",
+    description: event.description || "",
+    choices: Array.isArray(event.choices) ? event.choices : []
+  }));
+}
+
+export function normalizeReport(report, state) {
+  if (!report) {
+    return fallbackReport(state);
+  }
+
+  return {
+    summary: report.summary || "Sem alterações relevantes.",
+    statsChange: report.statsChange || {}
+  };
+}
+
+export function parseStatsUpdate(text) {
+  try {
+    const match = text.match(/\{[\s\S]*\}/);
+
+    if (!match) return null;
+
+    return JSON.parse(match[0]);
+
+  } catch {
+    return null;
+  }
+}
+
+export function stripStatsUpdate(text) {
+  return text.replace(/\{[\s\S]*\}/, '').trim();
+}
