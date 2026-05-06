@@ -237,7 +237,7 @@ async function handleAction(event) {
 
 async function nextTurn() {
   resolveWars(state);
-  worldAI(state);
+  runWorldAI(state);
   runAdvancedWorldAI(state);
   setBusy(true);
   showLoading('A redigir o relatório do turno...');
@@ -386,6 +386,17 @@ async function handleDiplomacy(event) {
 
     notify(`⚔️ Guerra iniciada contra ${iso}`);
   }
+
+  /* 🤝 PEDIDO DE ALIANÇA */
+
+if (
+  msgLower.includes("aliança") ||
+  msgLower.includes("aliado")
+) {
+  requestAlliance(state, iso);
+
+  notify(`🤝 Pedido de aliança enviado para ${iso}`);
+}
 
   selectCountry(iso, { quiet: true, tab: 'diplo' });
   const country = getCountryInfo(iso);
