@@ -716,3 +716,41 @@ export function resolveWars(state) {
     return true;
   });
 }
+
+/* =========================
+   🤝 FALLBACK DIPLOMACIA
+========================= */
+
+export function fallbackDiplomacy(state, countryName, message) {
+  const lower = message.toLowerCase();
+
+  // 🤝 amizade
+  if (
+    lower.includes("aliança") ||
+    lower.includes("amizade") ||
+    lower.includes("cooperação")
+  ) {
+    return `${countryName} considera a proposta interessante, mas necessita de mais garantias antes de aceitar formalmente.`;
+  }
+
+  // ⚔️ guerra
+  if (
+    lower.includes("guerra") ||
+    lower.includes("atacar") ||
+    lower.includes("invadir")
+  ) {
+    return `${countryName} condena fortemente essa ameaça militar e promete responder à altura.`;
+  }
+
+  // 💰 comércio
+  if (
+    lower.includes("comércio") ||
+    lower.includes("troca") ||
+    lower.includes("economia")
+  ) {
+    return `${countryName} demonstra interesse em fortalecer relações económicas.`;
+  }
+
+  // resposta genérica
+  return `${countryName} recebeu a tua mensagem e irá analisá-la cuidadosamente.`;
+}
