@@ -26,49 +26,57 @@ export async function initMap(state, onCountrySelect) {
   const height = Math.max(container.clientHeight, 320);
   projection = window.d3.geoNaturalEarth1().scale(width / 6.3).translate([width / 2, height / 2]);
   geoPath = window.d3.geoPath().projection(projection);
+  
   zoomBehavior = window.d3.zoom().scaleExtent([0.5, 14]).on('zoom', event => {
 
-  // 🔥 mover mapa
-  if (mapGroup) {
-    mapGroup.attr('transform', event.transform);
-  }
+    // 🔥 mover mapa
+    if (mapGroup) {
+      mapGroup.attr('transform', event.transform);
+    }
 
-  // 🔥 ajustar letras ao zoom
-  if (labelsGroup) {
+    // 🔥 labels inteligentes
+    if (labelsGroup) {
 
-    labelsGroup.selectAll('.country-label')
+      labelsGroup.selectAll('.country-label')
 
-      .style('font-size', feature => {
+        // 🔥 tamanho dinâmico
+        .style('font-size', feature => {
 
-        const area = window.d3.geoArea(feature);
-        const zoom = event.transform.k;
+          const area = window.d3.geoArea(feature);
+          const zoom = event.transform.k;
 
-        let size = 6;
+          let size = 6;
 
-        if (area > 0.15) size = 18;
-        else if (area > 0.06) size = 14;
-        else if (area > 0.02) size = 11;
-        else if (area > 0.006) size = 8;
+          if (area > 0.15) size = 18;
+          else if (area > 0.06) size = 14;
+          else if (area > 0.02) size = 11;
+          else if (area > 0.006) size = 8;
 
-        // 🔥 zoom dinâmico
-        size = size / Math.sqrt(zoom);
+          // 🔥 reduzir no zoom out
+          size = size / Math.sqrt(zoom);
 
-        return `${Math.max(4, size)}px`;
-      })
+          return `${Math.max(4, size)}px`;
+        })
 
-      // 🔥 esconder labels pequenas no zoom out
-      .style('opacity', feature => {
+        // 🔥 nomes aparecem só com zoom
+        .style('opacity', feature => {
 
-        const area = window.d3.geoArea(feature);
-        const zoom = event.transform.k;
+          const area = window.d3.geoArea(feature);
+          const zoom = event.transform.k;
 
-        if (zoom < 1 && area < 0.01) return 0;
-        if (zoom < 0.8 && area < 0.03) return 0;
+          // 🔥 zoom normal = esconder
+          if (zoom < 2) return 0;
 
-        return 0.82;
-      });
-  }
-});
+          // 🔥 países pequenos precisam de mais zoom
+          if (area < 0.01 && zoom < 3) return 0;
+
+          if (area < 0.004 && zoom < 5) return 0;
+
+          return 0.82;
+        });
+    }
+  });
+
   svgEl.call(zoomBehavior);
   svgEl.selectAll('*').remove();
   mapGroup = svgEl.append('g');
@@ -159,11 +167,11 @@ export function getCountryFill(iso, state) {
   if (iso === getPlayerISO(state)) return '#7a5820';
   const relation = state.relations[iso];
   if (relation && typeof relation === "object") {
-  if (relation.status === "ally") return '#1e3828';
-  if (relation.status === "friendly") return '#244a35';
-  if (relation.status === "hostile") return '#2e1818';
-  if (relation.status === "cold") return '#2a2010';
-}
+    if (relation.status === "ally") return '#1e3828';
+    if (relation.status === "friendly") return '#244a35';
+    if (relation.status === "hostile") return '#2e1818';
+    if (relation.status === "cold") return '#2a2010';
+  }
   const h = (iso.charCodeAt(0) * 31 + iso.charCodeAt(1) * 17 + iso.charCodeAt(2) * 7) % 360;
   if (state.currentLayer === 'economy') return `hsl(${110 + (h % 30)},18%,13%)`;
   if (state.currentLayer === 'military') return `hsl(${210 + (h % 24)},20%,13%)`;
@@ -203,10 +211,10 @@ function renderLabels() {
 
       const area = window.d3.geoArea(feature);
 
-      // 🔥 esconder países minúsculos
+      // 🔥 esconder micro países
       if (area < 0.0015) return '';
 
-      // 🔥 abreviações automáticas
+      // 🔥 abreviações
       const shortNames = {
 
         "República Democrática do Congo": "RDC",
@@ -224,7 +232,7 @@ function renderLabels() {
         name = shortNames[name];
       }
 
-      // 🔥 cortar nomes longos
+      // 🔥 cortar nomes grandes
       if (area < 0.01 && name.length > 10) {
         name = name.slice(0, 8);
       }
@@ -232,7 +240,7 @@ function renderLabels() {
       return name;
     })
 
-    // 🔥 tamanho inteligente
+    // 🔥 tamanho base
     .style('font-size', feature => {
 
       const area = window.d3.geoArea(feature);
@@ -245,51 +253,17 @@ function renderLabels() {
       return '6px';
     })
 
-    // 🔥 centralizar
+    // 🔥 começa escondido
+    .style('opacity', 0)
+
+    // 🔥 centralizado
     .attr('text-anchor', 'middle')
 
-    // 🔥 estilo
-    .attr('opacity', 0.82)
-
-    // 🔥 não bloquear clique
+    // 🔥 sem bloquear clique
     .style('pointer-events', 'none')
 
     // 🔥 impedir seleção
     .style('user-select', 'none');
-}
-
-  labelsGroup.selectAll('.country-label')
-    .data(labelFeatures)
-    .enter()
-    .append('text')
-    .attr('class', 'country-label')
-    .attr('transform', feature => {
-      const center = geoPath.centroid(feature);
-      return Number.isNaN(center[0]) ? 'translate(0,0)' : `translate(${center[0]},${center[1]})`;
-    })
-    .text(feature => {
-      const name = COUNTRIES[NUM2ISO[feature.id]]?.name || '';
-
-      const area = window.d3.geoArea(feature);
-
-      // 🔥 ajustar nome ao tamanho do país
-      if (area < 0.002) return ''; // esconder países pequenos
-      if (area < 0.01) return name.slice(0, 6); // abreviar
-      if (area < 0.03) return name.slice(0, 10);
-
-      return name;
-    })
-    .attr('font-size', feature => {
-      const area = window.d3.geoArea(feature);
-
-      if (area > 0.1) return '14px';
-      if (area > 0.03) return '11px';
-      if (area > 0.008) return '9px';
-
-      return '7px';
-    })
-    .attr('text-anchor', 'middle')
-    .attr('opacity', 0.85);
 }
 
 function getLabelFontSize(feature) {
