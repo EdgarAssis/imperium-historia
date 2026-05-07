@@ -154,11 +154,25 @@ export function applyInvestment(state, stat) {
   const inflationFactor = 1 + (state.currency.inflation / 100);
   const realCost = Math.floor(investment.cost * inflationFactor);
 
-  if (state.treasury < realCost) {
-    return { ok: false, message: `Tesouro insuficiente. Precisas de ${realCost} moedas.` };
-  }
+  // 🔥 investimento usa PIB/economia e não tesouro
 
-  state.treasury -= realCost;
+if (state.stats.economy < 5) {
+  return {
+    ok: false,
+    message: "Economia demasiado fraca para investir."
+  };
+}
+
+// impacto económico temporário
+state.lastInvestmentCost =
+  (state.lastInvestmentCost || 0) + realCost;
+
+// pequeno impacto imediato
+state.stats.economy = clamp(
+  state.stats.economy - 2,
+  0,
+  100
+);
 
   /* 🔥 REGISTA IMPACTO NO PIB */
   state.lastInvestmentCost = (state.lastInvestmentCost || 0) + investment.cost;
