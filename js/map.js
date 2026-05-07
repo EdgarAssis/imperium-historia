@@ -61,19 +61,23 @@ export async function initMap(state, onCountrySelect) {
       // 🔥 nomes aparecem só com zoom
       .style('opacity', feature => {
 
-        const area = window.d3.geoArea(feature);
-        const zoom = event.transform.k;
+  const area = window.d3.geoArea(feature);
+  const zoom = event.transform.k;
 
-        // 🔥 zoom normal = esconder
-        if (zoom < 2) return 0;
+  // 🔥 zoom afastado = esconder tudo
+  if (zoom < 3) return 0;
 
-        // 🔥 países pequenos precisam de mais zoom
-        if (area < 0.01 && zoom < 3) return 0;
+  // 🔥 países médios
+  if (area < 0.02 && zoom < 4) return 0;
 
-        if (area < 0.004 && zoom < 5) return 0;
+  // 🔥 países pequenos
+  if (area < 0.008 && zoom < 5.5) return 0;
 
-        return 0.82;
-      });
+  // 🔥 micro países
+  if (area < 0.003 && zoom < 7) return 0;
+
+  return 0.82;
+});
   }
 });
 
