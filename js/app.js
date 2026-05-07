@@ -289,7 +289,15 @@ async function nextTurn() {
   }
 
   /* 🔥 APLICAR MUDANÇAS */
-  state.stats = clampStats(report.statsChange);
+  // 🔥 aplicar mudanças SEM substituir stats
+
+for (const stat in report.statsChange) {
+  state.stats[stat] = clamp(
+    state.stats[stat] + report.statsChange[stat],
+    0,
+    100
+  );
+}
   state.lastReport = report;
 
   /* 🔥 LOG DE TRATADOS */
