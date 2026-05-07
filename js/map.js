@@ -29,53 +29,53 @@ export async function initMap(state, onCountrySelect) {
   
   zoomBehavior = window.d3.zoom().scaleExtent([0.5, 14]).on('zoom', event => {
 
-    // 🔥 mover mapa
-    if (mapGroup) {
-      mapGroup.attr('transform', event.transform);
-    }
+  // 🔥 mover mapa
+  if (mapGroup) {
+    mapGroup.attr('transform', event.transform);
+  }
 
-    // 🔥 labels inteligentes
-    if (labelsGroup) {
+  // 🔥 labels inteligentes
+  if (labelsGroup) {
 
-      labelsGroup.selectAll('.country-label')
+    labelsGroup.selectAll('.country-label')
 
-        // 🔥 tamanho dinâmico
-        .style('font-size', feature => {
+      // 🔥 tamanho dinâmico
+      .style('font-size', feature => {
 
-          const area = window.d3.geoArea(feature);
-          const zoom = event.transform.k;
+        const area = window.d3.geoArea(feature);
+        const zoom = event.transform.k;
 
-          let size = 6;
+        let size = 6;
 
-          if (area > 0.15) size = 18;
-          else if (area > 0.06) size = 14;
-          else if (area > 0.02) size = 11;
-          else if (area > 0.006) size = 8;
+        if (area > 0.15) size = 18;
+        else if (area > 0.06) size = 14;
+        else if (area > 0.02) size = 11;
+        else if (area > 0.006) size = 8;
 
-          // 🔥 reduzir no zoom out
-          size = size / Math.sqrt(zoom);
+        // 🔥 reduzir no zoom out
+        size = size / Math.sqrt(zoom);
 
-          return `${Math.max(4, size)}px`;
-        })
+        return `${Math.max(4, size)}px`;
+      })
 
-        // 🔥 nomes aparecem só com zoom
-        .style('opacity', feature => {
+      // 🔥 nomes aparecem só com zoom
+      .style('opacity', feature => {
 
-          const area = window.d3.geoArea(feature);
-          const zoom = event.transform.k;
+        const area = window.d3.geoArea(feature);
+        const zoom = event.transform.k;
 
-          // 🔥 zoom normal = esconder
-          if (zoom < 2) return 0;
+        // 🔥 zoom normal = esconder
+        if (zoom < 2) return 0;
 
-          // 🔥 países pequenos precisam de mais zoom
-          if (area < 0.01 && zoom < 3) return 0;
+        // 🔥 países pequenos precisam de mais zoom
+        if (area < 0.01 && zoom < 3) return 0;
 
-          if (area < 0.004 && zoom < 5) return 0;
+        if (area < 0.004 && zoom < 5) return 0;
 
-          return 0.82;
-        });
-    }
-  });
+        return 0.82;
+      });
+  }
+});
 
   svgEl.call(zoomBehavior);
   svgEl.selectAll('*').remove();
