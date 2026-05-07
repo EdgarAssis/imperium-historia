@@ -27,8 +27,48 @@ export async function initMap(state, onCountrySelect) {
   projection = window.d3.geoNaturalEarth1().scale(width / 6.3).translate([width / 2, height / 2]);
   geoPath = window.d3.geoPath().projection(projection);
   zoomBehavior = window.d3.zoom().scaleExtent([0.5, 14]).on('zoom', event => {
-    if (mapGroup) mapGroup.attr('transform', event.transform);
-  });
+
+  // 🔥 mover mapa
+  if (mapGroup) {
+    mapGroup.attr('transform', event.transform);
+  }
+
+  // 🔥 ajustar letras ao zoom
+  if (labelsGroup) {
+
+    labelsGroup.selectAll('.country-label')
+
+      .style('font-size', feature => {
+
+        const area = window.d3.geoArea(feature);
+        const zoom = event.transform.k;
+
+        let size = 6;
+
+        if (area > 0.15) size = 18;
+        else if (area > 0.06) size = 14;
+        else if (area > 0.02) size = 11;
+        else if (area > 0.006) size = 8;
+
+        // 🔥 zoom dinâmico
+        size = size / Math.sqrt(zoom);
+
+        return `${Math.max(4, size)}px`;
+      })
+
+      // 🔥 esconder labels pequenas no zoom out
+      .style('opacity', feature => {
+
+        const area = window.d3.geoArea(feature);
+        const zoom = event.transform.k;
+
+        if (zoom < 1 && area < 0.01) return 0;
+        if (zoom < 0.8 && area < 0.03) return 0;
+
+        return 0.82;
+      });
+  }
+});
   svgEl.call(zoomBehavior);
   svgEl.selectAll('*').remove();
   mapGroup = svgEl.append('g');
@@ -131,10 +171,92 @@ export function getCountryFill(iso, state) {
 }
 
 function renderLabels() {
+
   const labelFeatures = featuresCache.filter(feature => {
     const iso = NUM2ISO[feature.id];
     return COUNTRIES[iso];
   });
+
+  labelsGroup.selectAll('.country-label')
+    .data(labelFeatures)
+    .enter()
+    .append('text')
+
+    .attr('class', 'country-label')
+
+    // 🔥 posição central
+    .attr('transform', feature => {
+
+      const center = geoPath.centroid(feature);
+
+      return Number.isNaN(center[0])
+        ? 'translate(0,0)'
+        : `translate(${center[0]},${center[1]})`;
+    })
+
+    // 🔥 nomes inteligentes
+    .text(feature => {
+
+      const iso = NUM2ISO[feature.id];
+
+      let name = COUNTRIES[iso]?.name || '';
+
+      const area = window.d3.geoArea(feature);
+
+      // 🔥 esconder países minúsculos
+      if (area < 0.0015) return '';
+
+      // 🔥 abreviações automáticas
+      const shortNames = {
+
+        "República Democrática do Congo": "RDC",
+        "Estados Unidos da América": "EUA",
+        "Arábia Saudita": "Arábia",
+        "África do Sul": "África Sul",
+        "República Centro-Africana": "RCA",
+        "Nova Zelândia": "NZ",
+        "Reino Unido": "RU",
+        "Emirados Árabes Unidos": "EAU"
+
+      };
+
+      if (shortNames[name]) {
+        name = shortNames[name];
+      }
+
+      // 🔥 cortar nomes longos
+      if (area < 0.01 && name.length > 10) {
+        name = name.slice(0, 8);
+      }
+
+      return name;
+    })
+
+    // 🔥 tamanho inteligente
+    .style('font-size', feature => {
+
+      const area = window.d3.geoArea(feature);
+
+      if (area > 0.15) return '18px';
+      if (area > 0.06) return '14px';
+      if (area > 0.02) return '11px';
+      if (area > 0.006) return '8px';
+
+      return '6px';
+    })
+
+    // 🔥 centralizar
+    .attr('text-anchor', 'middle')
+
+    // 🔥 estilo
+    .attr('opacity', 0.82)
+
+    // 🔥 não bloquear clique
+    .style('pointer-events', 'none')
+
+    // 🔥 impedir seleção
+    .style('user-select', 'none');
+}
 
   labelsGroup.selectAll('.country-label')
     .data(labelFeatures)
