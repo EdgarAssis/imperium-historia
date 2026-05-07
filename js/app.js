@@ -241,7 +241,6 @@ async function nextTurn() {
   runAdvancedWorldAI(state);
   setBusy(true);
   showLoading('A redigir o relatório do turno...');
-  applyDebt(state);
   applyMaintenance(state);
   applyDebt(state);
   processDiplomacy(state);
