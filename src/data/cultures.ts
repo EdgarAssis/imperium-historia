@@ -1,0 +1,71 @@
+// src/data/cultures.ts
+// Mapa país -> cultura/etnia dominante (para enriquecer províncias que não
+// tenham cultura explícita no cenário). Base aproximada, editável.
+// Nota: culturas semelhantes (ex.: «portuguesa» e «brasileira») facilitam a
+// integração de territórios conquistados — usado pela Fase 4 (futura).
+
+export const CULTURA_POR_PAIS: Readonly<Record<string, string>> = {
+  USA: "americana",
+  CHN: "hân",
+  RUS: "russa",
+  IND: "hindi",
+  DEU: "alemã",
+  FRA: "francesa",
+  GBR: "inglesa",
+  JPN: "japonesa",
+  BRA: "brasileira",
+  PRT: "portuguesa",
+  CAN: "canadense",
+  MEX: "mexicana",
+  ARG: "argentina",
+  COL: "colombiana",
+  CHL: "chilena",
+  ESP: "espanhola",
+  ITA: "italiana",
+  POL: "polaca",
+  UKR: "ucraniana",
+  TUR: "turca",
+  KOR: "coreana",
+  IDN: "javanesa",
+  PAK: "punjabi",
+  SAU: "árabe-saudita",
+  IRN: "persa",
+  VNM: "vietnamita",
+  ZAF: "zulu",
+  EGY: "árabe-egípcia",
+  NGA: "iorubá",
+  AUS: "australiana",
+  THA: "tai",
+  PHL: "tagala",
+  BGD: "bengali",
+  SWE: "sueca",
+  BEL: "flamenga",
+  CHE: "suíça-alemã",
+  ISR: "israelita",
+  MAR: "árabe-marroquina",
+  DZA: "árabe-argelina",
+  PER: "peruana",
+  TUN: "árabe-tunisina",
+  SDN: "árabe-sudanesa",
+  AGO: "umbundu",
+  COD: "congolesa",
+  CMR: "camaronesa",
+  CIV: "baulé",
+  SEN: "uolofe",
+  UGA: "ganda",
+  MOZ: "macua",
+  MDG: "merina",
+  ZMB: "bemba",
+  SOM: "somali",
+  MLI: "mandinga",
+  NER: "hauçá",
+  BFA: "mossi",
+  ETH: "amara",
+  KEN: "kikuyu",
+  ZWE: "shona",
+};
+
+/** Devolve a cultura dominante de um país (fallback: «local»). */
+export function culturaDoPais(countryId: string): string {
+  return CULTURA_POR_PAIS[countryId] ?? "local";
+}

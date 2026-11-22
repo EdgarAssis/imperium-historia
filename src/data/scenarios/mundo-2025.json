@@ -1,0 +1,3567 @@
+{
+  "id": "mundo-2025",
+  "nome": "Mundo 2025",
+  "descricao": "Cenário de partida: ordem geopolítica contemporânea em 2025 com 57 países detalhados (dados realistas: população, PIB, orçamento militar, tropas, nuclear, blocos, líder) e ~150 províncias/regiões com cultura, lealdade e valor estratégico. Países adicionais do mapa aparecem a cinzento com a etiqueta «sem dados». Valores aproximados e plausíveis.",
+  "dataInicio": "2025-01-01",
+  "resolution": "mensal",
+  "provincias": [
+    {
+      "id": "USA-DC",
+      "nome": "Distrito da Colúmbia",
+      "countryId": "USA",
+      "populacao": 680000,
+      "pib": 150000000000,
+      "ocupadaPor": null,
+      "lat": 38.91,
+      "lng": -77.04,
+      "cultura": "americana",
+      "lealdade": 60,
+      "recursos": [
+        "governo",
+        "serviços"
+      ],
+      "valorEstrategico": 5
+    },
+    {
+      "id": "USA-NYC",
+      "nome": "Nova Iorque",
+      "countryId": "USA",
+      "populacao": 19000000,
+      "pib": 1700000000000,
+      "ocupadaPor": null,
+      "lat": 40.71,
+      "lng": -74,
+      "cultura": "americana",
+      "lealdade": 62,
+      "recursos": [
+        "finanças",
+        "media"
+      ],
+      "valorEstrategico": 5
+    },
+    {
+      "id": "USA-LAX",
+      "nome": "Los Angeles",
+      "countryId": "USA",
+      "populacao": 13000000,
+      "pib": 1100000000000,
+      "ocupadaPor": null,
+      "lat": 34.05,
+      "lng": -118.24,
+      "cultura": "americana",
+      "lealdade": 55,
+      "recursos": [
+        "portos",
+        "cinema"
+      ],
+      "valorEstrategico": 4
+    },
+    {
+      "id": "CHN-BJ",
+      "nome": "Pequim",
+      "countryId": "CHN",
+      "populacao": 21500000,
+      "pib": 700000000000,
+      "ocupadaPor": null,
+      "lat": 39.9,
+      "lng": 116.4,
+      "cultura": "hân",
+      "lealdade": 75,
+      "recursos": [
+        "governo",
+        "tecnologia"
+      ],
+      "valorEstrategico": 5
+    },
+    {
+      "id": "CHN-SHA",
+      "nome": "Xangai",
+      "countryId": "CHN",
+      "populacao": 24000000,
+      "pib": 600000000000,
+      "ocupadaPor": null,
+      "lat": 31.23,
+      "lng": 121.47,
+      "cultura": "hân",
+      "lealdade": 70,
+      "recursos": [
+        "finanças",
+        "indústria"
+      ],
+      "valorEstrategico": 5
+    },
+    {
+      "id": "CHN-CAN",
+      "nome": "Cantão",
+      "countryId": "CHN",
+      "populacao": 14000000,
+      "pib": 380000000000,
+      "ocupadaPor": null,
+      "lat": 23.13,
+      "lng": 113.26,
+      "cultura": "cantonês",
+      "lealdade": 65,
+      "recursos": [
+        "indústria",
+        "exportações"
+      ],
+      "valorEstrategico": 4
+    },
+    {
+      "id": "RUS-MOW",
+      "nome": "Moscovo",
+      "countryId": "RUS",
+      "populacao": 13100000,
+      "pib": 400000000000,
+      "ocupadaPor": null,
+      "lat": 55.75,
+      "lng": 37.62,
+      "cultura": "russa",
+      "lealdade": 55,
+      "recursos": [
+        "governo",
+        "indústria"
+      ],
+      "valorEstrategico": 5
+    },
+    {
+      "id": "RUS-SPB",
+      "nome": "São Petersburgo",
+      "countryId": "RUS",
+      "populacao": 5500000,
+      "pib": 150000000000,
+      "ocupadaPor": null,
+      "lat": 59.93,
+      "lng": 30.34,
+      "cultura": "russa",
+      "lealdade": 50,
+      "recursos": [
+        "portos",
+        "indústria"
+      ],
+      "valorEstrategico": 4
+    },
+    {
+      "id": "RUS-VVO",
+      "nome": "Vladivostok",
+      "countryId": "RUS",
+      "populacao": 1000000,
+      "pib": 30000000000,
+      "ocupadaPor": null,
+      "lat": 43.12,
+      "lng": 131.89,
+      "cultura": "russa",
+      "lealdade": 45,
+      "recursos": [
+        "portos",
+        "militar"
+      ],
+      "valorEstrategico": 4
+    },
+    {
+      "id": "IND-DEL",
+      "nome": "Déli",
+      "countryId": "IND",
+      "populacao": 33000000,
+      "pib": 130000000000,
+      "ocupadaPor": null,
+      "lat": 28.61,
+      "lng": 77.21,
+      "cultura": "hindi",
+      "lealdade": 60,
+      "recursos": [
+        "governo",
+        "tecnologia"
+      ],
+      "valorEstrategico": 5
+    },
+    {
+      "id": "IND-MUM",
+      "nome": "Mumbai",
+      "countryId": "IND",
+      "populacao": 21000000,
+      "pib": 310000000000,
+      "ocupadaPor": null,
+      "lat": 19.08,
+      "lng": 72.88,
+      "cultura": "marata",
+      "lealdade": 58,
+      "recursos": [
+        "finanças",
+        "cinema"
+      ],
+      "valorEstrategico": 4
+    },
+    {
+      "id": "IND-BLR",
+      "nome": "Bangalore",
+      "countryId": "IND",
+      "populacao": 13000000,
+      "pib": 110000000000,
+      "ocupadaPor": null,
+      "lat": 12.97,
+      "lng": 77.59,
+      "cultura": "canará",
+      "lealdade": 60,
+      "recursos": [
+        "tecnologia"
+      ],
+      "valorEstrategico": 4
+    },
+    {
+      "id": "DEU-BER",
+      "nome": "Berlim",
+      "countryId": "DEU",
+      "populacao": 3700000,
+      "pib": 200000000000,
+      "ocupadaPor": null,
+      "lat": 52.52,
+      "lng": 13.4,
+      "cultura": "alemã",
+      "lealdade": 68,
+      "recursos": [
+        "governo",
+        "indústria"
+      ],
+      "valorEstrategico": 4
+    },
+    {
+      "id": "FRA-PAR",
+      "nome": "Paris",
+      "countryId": "FRA",
+      "populacao": 11100000,
+      "pib": 900000000000,
+      "ocupadaPor": null,
+      "lat": 48.86,
+      "lng": 2.35,
+      "cultura": "francesa",
+      "lealdade": 62,
+      "recursos": [
+        "finanças",
+        "moda"
+      ],
+      "valorEstrategico": 5
+    },
+    {
+      "id": "GBR-LON",
+      "nome": "Londres",
+      "countryId": "GBR",
+      "populacao": 9000000,
+      "pib": 700000000000,
+      "ocupadaPor": null,
+      "lat": 51.51,
+      "lng": -0.13,
+      "cultura": "inglesa",
+      "lealdade": 60,
+      "recursos": [
+        "finanças"
+      ],
+      "valorEstrategico": 5
+    },
+    {
+      "id": "JPN-TYO",
+      "nome": "Tóquio",
+      "countryId": "JPN",
+      "populacao": 14000000,
+      "pib": 1600000000000,
+      "ocupadaPor": null,
+      "lat": 35.68,
+      "lng": 139.69,
+      "cultura": "japonesa",
+      "lealdade": 72,
+      "recursos": [
+        "finanças",
+        "tecnologia"
+      ],
+      "valorEstrategico": 5
+    },
+    {
+      "id": "JPN-OSA",
+      "nome": "Osaca",
+      "countryId": "JPN",
+      "populacao": 8800000,
+      "pib": 480000000000,
+      "ocupadaPor": null,
+      "lat": 34.69,
+      "lng": 135.5,
+      "cultura": "japonesa",
+      "lealdade": 70,
+      "recursos": [
+        "indústria"
+      ],
+      "valorEstrategico": 4
+    },
+    {
+      "id": "JPN-NGY",
+      "nome": "Nagoia",
+      "countryId": "JPN",
+      "populacao": 2300000,
+      "pib": 220000000000,
+      "ocupadaPor": null,
+      "lat": 35.18,
+      "lng": 136.91,
+      "cultura": "japonesa",
+      "lealdade": 70,
+      "recursos": [
+        "automóvel"
+      ],
+      "valorEstrategico": 4
+    },
+    {
+      "id": "BRA-BSB",
+      "nome": "Brasília",
+      "countryId": "BRA",
+      "populacao": 3000000,
+      "pib": 90000000000,
+      "ocupadaPor": null,
+      "lat": -15.79,
+      "lng": -47.88,
+      "cultura": "brasileira",
+      "lealdade": 55,
+      "recursos": [
+        "governo"
+      ],
+      "valorEstrategico": 4
+    },
+    {
+      "id": "BRA-SPO",
+      "nome": "São Paulo",
+      "countryId": "BRA",
+      "populacao": 22000000,
+      "pib": 430000000000,
+      "ocupadaPor": null,
+      "lat": -23.55,
+      "lng": -46.63,
+      "cultura": "brasileira",
+      "lealdade": 52,
+      "recursos": [
+        "indústria",
+        "finanças"
+      ],
+      "valorEstrategico": 5
+    },
+    {
+      "id": "BRA-RIO",
+      "nome": "Rio de Janeiro",
+      "countryId": "BRA",
+      "populacao": 13000000,
+      "pib": 230000000000,
+      "ocupadaPor": null,
+      "lat": -22.91,
+      "lng": -43.17,
+      "cultura": "brasileira",
+      "lealdade": 50,
+      "recursos": [
+        "petróleo",
+        "turismo"
+      ],
+      "valorEstrategico": 4
+    },
+    {
+      "id": "PRT-LIS",
+      "nome": "Lisboa",
+      "countryId": "PRT",
+      "populacao": 2900000,
+      "pib": 80000000000,
+      "ocupadaPor": null,
+      "lat": 38.72,
+      "lng": -9.13,
+      "cultura": "portuguesa",
+      "lealdade": 60,
+      "recursos": [
+        "portos",
+        "turismo",
+        "finanças"
+      ],
+      "valorEstrategico": 4
+    },
+    {
+      "id": "CAN-YOW",
+      "nome": "Ottawa",
+      "countryId": "CAN",
+      "populacao": 1000000,
+      "pib": 70000000000,
+      "ocupadaPor": null,
+      "lat": 45.42,
+      "lng": -75.7,
+      "cultura": "canadense",
+      "lealdade": 65,
+      "recursos": [
+        "governo"
+      ],
+      "valorEstrategico": 3
+    },
+    {
+      "id": "MEX-MEX",
+      "nome": "Cidade do México",
+      "countryId": "MEX",
+      "populacao": 22000000,
+      "pib": 300000000000,
+      "ocupadaPor": null,
+      "lat": 19.43,
+      "lng": -99.13,
+      "cultura": "mexicana",
+      "lealdade": 50,
+      "recursos": [
+        "governo",
+        "indústria"
+      ],
+      "valorEstrategico": 5
+    },
+    {
+      "id": "MEX-GDL",
+      "nome": "Guadalajara",
+      "countryId": "MEX",
+      "populacao": 5300000,
+      "pib": 70000000000,
+      "ocupadaPor": null,
+      "lat": 20.66,
+      "lng": -103.34,
+      "cultura": "mexicana",
+      "lealdade": 48,
+      "recursos": [
+        "indústria",
+        "tecnologia"
+      ],
+      "valorEstrategico": 3
+    },
+    {
+      "id": "MEX-MTY",
+      "nome": "Monterrei",
+      "countryId": "MEX",
+      "populacao": 5100000,
+      "pib": 95000000000,
+      "ocupadaPor": null,
+      "lat": 25.69,
+      "lng": -100.32,
+      "cultura": "mexicana",
+      "lealdade": 50,
+      "recursos": [
+        "indústria",
+        "aço"
+      ],
+      "valorEstrategico": 4
+    },
+    {
+      "id": "ARG-BUE",
+      "nome": "Buenos Aires",
+      "countryId": "ARG",
+      "populacao": 15000000,
+      "pib": 220000000000,
+      "ocupadaPor": null,
+      "lat": -34.61,
+      "lng": -58.38,
+      "cultura": "argentina",
+      "lealdade": 45,
+      "recursos": [
+        "portos",
+        "agrícola"
+      ],
+      "valorEstrategico": 4
+    },
+    {
+      "id": "COL-BOG",
+      "nome": "Bogotá",
+      "countryId": "COL",
+      "populacao": 11000000,
+      "pib": 110000000000,
+      "ocupadaPor": null,
+      "lat": 4.71,
+      "lng": -74.07,
+      "cultura": "colombiana",
+      "lealdade": 48,
+      "recursos": [
+        "governo",
+        "finanças"
+      ],
+      "valorEstrategico": 4
+    },
+    {
+      "id": "CHL-SCL",
+      "nome": "Santiago",
+      "countryId": "CHL",
+      "populacao": 6800000,
+      "pib": 150000000000,
+      "ocupadaPor": null,
+      "lat": -33.45,
+      "lng": -70.67,
+      "cultura": "chilena",
+      "lealdade": 55,
+      "recursos": [
+        "governo",
+        "mineração"
+      ],
+      "valorEstrategico": 4
+    },
+    {
+      "id": "ESP-MAD",
+      "nome": "Madrid",
+      "countryId": "ESP",
+      "populacao": 6700000,
+      "pib": 260000000000,
+      "ocupadaPor": null,
+      "lat": 40.42,
+      "lng": -3.7,
+      "cultura": "espanhola",
+      "lealdade": 58,
+      "recursos": [
+        "governo",
+        "serviços"
+      ],
+      "valorEstrategico": 4
+    },
+    {
+      "id": "ITA-ROM",
+      "nome": "Roma",
+      "countryId": "ITA",
+      "populacao": 4300000,
+      "pib": 180000000000,
+      "ocupadaPor": null,
+      "lat": 41.9,
+      "lng": 12.5,
+      "cultura": "italiana",
+      "lealdade": 55,
+      "recursos": [
+        "governo",
+        "turismo"
+      ],
+      "valorEstrategico": 4
+    },
+    {
+      "id": "POL-WAW",
+      "nome": "Varsóvia",
+      "countryId": "POL",
+      "populacao": 1800000,
+      "pib": 120000000000,
+      "ocupadaPor": null,
+      "lat": 52.23,
+      "lng": 21.01,
+      "cultura": "polaca",
+      "lealdade": 60,
+      "recursos": [
+        "indústria"
+      ],
+      "valorEstrategico": 3
+    },
+    {
+      "id": "UKR-IEV",
+      "nome": "Kyiv",
+      "countryId": "UKR",
+      "populacao": 3000000,
+      "pib": 40000000000,
+      "ocupadaPor": null,
+      "lat": 50.45,
+      "lng": 30.52,
+      "cultura": "ucraniana",
+      "lealdade": 80,
+      "recursos": [
+        "governo",
+        "indústria"
+      ],
+      "valorEstrategico": 5
+    },
+    {
+      "id": "TUR-IST",
+      "nome": "Istambul",
+      "countryId": "TUR",
+      "populacao": 15500000,
+      "pib": 240000000000,
+      "ocupadaPor": null,
+      "lat": 41.01,
+      "lng": 28.98,
+      "cultura": "turca",
+      "lealdade": 50,
+      "recursos": [
+        "comércio",
+        "turismo"
+      ],
+      "valorEstrategico": 4
+    },
+    {
+      "id": "KOR-SEL",
+      "nome": "Seul",
+      "countryId": "KOR",
+      "populacao": 9700000,
+      "pib": 700000000000,
+      "ocupadaPor": null,
+      "lat": 37.57,
+      "lng": 126.98,
+      "cultura": "coreana",
+      "lealdade": 62,
+      "recursos": [
+        "tecnologia",
+        "semicondutores"
+      ],
+      "valorEstrategico": 5
+    },
+    {
+      "id": "IDN-JKT",
+      "nome": "Jakarta",
+      "countryId": "IDN",
+      "populacao": 11000000,
+      "pib": 250000000000,
+      "ocupadaPor": null,
+      "lat": -6.21,
+      "lng": 106.85,
+      "cultura": "javanesa",
+      "lealdade": 60,
+      "recursos": [
+        "governo",
+        "comércio"
+      ],
+      "valorEstrategico": 4
+    },
+    {
+      "id": "IDN-SBY",
+      "nome": "Surabaia",
+      "countryId": "IDN",
+      "populacao": 8700000,
+      "pib": 90000000000,
+      "ocupadaPor": null,
+      "lat": -7.25,
+      "lng": 112.75,
+      "cultura": "javanesa",
+      "lealdade": 58,
+      "recursos": [
+        "portos",
+        "indústria"
+      ],
+      "valorEstrategico": 3
+    },
+    {
+      "id": "IDN-MDN",
+      "nome": "Medan",
+      "countryId": "IDN",
+      "populacao": 5300000,
+      "pib": 35000000000,
+      "ocupadaPor": null,
+      "lat": 3.59,
+      "lng": 98.67,
+      "cultura": "malaia",
+      "lealdade": 55,
+      "recursos": [
+        "agrícola"
+      ],
+      "valorEstrategico": 3
+    },
+    {
+      "id": "PAK-ISB",
+      "nome": "Islamabad",
+      "countryId": "PAK",
+      "populacao": 1100000,
+      "pib": 25000000000,
+      "ocupadaPor": null,
+      "lat": 33.68,
+      "lng": 73.05,
+      "cultura": "punjabi",
+      "lealdade": 45,
+      "recursos": [
+        "governo"
+      ],
+      "valorEstrategico": 3
+    },
+    {
+      "id": "PAK-KHI",
+      "nome": "Carachi",
+      "countryId": "PAK",
+      "populacao": 17000000,
+      "pib": 80000000000,
+      "ocupadaPor": null,
+      "lat": 24.86,
+      "lng": 67.01,
+      "cultura": "sindi",
+      "lealdade": 40,
+      "recursos": [
+        "portos",
+        "indústria"
+      ],
+      "valorEstrategico": 4
+    },
+    {
+      "id": "PAK-LHE",
+      "nome": "Lahore",
+      "countryId": "PAK",
+      "populacao": 13000000,
+      "pib": 60000000000,
+      "ocupadaPor": null,
+      "lat": 31.55,
+      "lng": 74.34,
+      "cultura": "punjabi",
+      "lealdade": 45,
+      "recursos": [
+        "agrícola",
+        "têxtil"
+      ],
+      "valorEstrategico": 3
+    },
+    {
+      "id": "SAU-RUH",
+      "nome": "Riade",
+      "countryId": "SAU",
+      "populacao": 7500000,
+      "pib": 260000000000,
+      "ocupadaPor": null,
+      "lat": 24.71,
+      "lng": 46.68,
+      "cultura": "árabe-saudita",
+      "lealdade": 65,
+      "recursos": [
+        "petróleo",
+        "governo"
+      ],
+      "valorEstrategico": 5
+    },
+    {
+      "id": "IRN-THR",
+      "nome": "Teerão",
+      "countryId": "IRN",
+      "populacao": 9500000,
+      "pib": 80000000000,
+      "ocupadaPor": null,
+      "lat": 35.69,
+      "lng": 51.39,
+      "cultura": "persa",
+      "lealdade": 45,
+      "recursos": [
+        "petróleo",
+        "governo"
+      ],
+      "valorEstrategico": 5
+    },
+    {
+      "id": "VNM-HAN",
+      "nome": "Hanói",
+      "countryId": "VNM",
+      "populacao": 8500000,
+      "pib": 70000000000,
+      "ocupadaPor": null,
+      "lat": 21.03,
+      "lng": 105.85,
+      "cultura": "vietnamita",
+      "lealdade": 70,
+      "recursos": [
+        "governo",
+        "indústria"
+      ],
+      "valorEstrategico": 4
+    },
+    {
+      "id": "ZAF-PRE",
+      "nome": "Pretória",
+      "countryId": "ZAF",
+      "populacao": 750000,
+      "pib": 50000000000,
+      "ocupadaPor": null,
+      "lat": -25.75,
+      "lng": 28.19,
+      "cultura": "zulu",
+      "lealdade": 50,
+      "recursos": [
+        "governo",
+        "mineração"
+      ],
+      "valorEstrategico": 4
+    },
+    {
+      "id": "EGY-CAI",
+      "nome": "Cairo",
+      "countryId": "EGY",
+      "populacao": 22000000,
+      "pib": 180000000000,
+      "ocupadaPor": null,
+      "lat": 30.04,
+      "lng": 31.24,
+      "cultura": "árabe-egípcia",
+      "lealdade": 50,
+      "recursos": [
+        "governo",
+        "canal de Suez"
+      ],
+      "valorEstrategico": 5
+    },
+    {
+      "id": "NGA-ABV",
+      "nome": "Abuja",
+      "countryId": "NGA",
+      "populacao": 3500000,
+      "pib": 40000000000,
+      "ocupadaPor": null,
+      "lat": 9.06,
+      "lng": 7.49,
+      "cultura": "iorubá",
+      "lealdade": 45,
+      "recursos": [
+        "governo"
+      ],
+      "valorEstrategico": 3
+    },
+    {
+      "id": "NGA-LOS",
+      "nome": "Lagos",
+      "countryId": "NGA",
+      "populacao": 15000000,
+      "pib": 90000000000,
+      "ocupadaPor": null,
+      "lat": 6.52,
+      "lng": 3.38,
+      "cultura": "iorubá",
+      "lealdade": 40,
+      "recursos": [
+        "petróleo",
+        "portos"
+      ],
+      "valorEstrategico": 5
+    },
+    {
+      "id": "NGA-KAN",
+      "nome": "Kano",
+      "countryId": "NGA",
+      "populacao": 3900000,
+      "pib": 15000000000,
+      "ocupadaPor": null,
+      "lat": 12,
+      "lng": 8.52,
+      "cultura": "haussa",
+      "lealdade": 42,
+      "recursos": [
+        "agrícola",
+        "comércio"
+      ],
+      "valorEstrategico": 3
+    },
+    {
+      "id": "AUS-CBR",
+      "nome": "Camberra",
+      "countryId": "AUS",
+      "populacao": 460000,
+      "pib": 60000000000,
+      "ocupadaPor": null,
+      "lat": -35.28,
+      "lng": 149.13,
+      "cultura": "australiana",
+      "lealdade": 65,
+      "recursos": [
+        "governo"
+      ],
+      "valorEstrategico": 3
+    },
+    {
+      "id": "THA-BKK",
+      "nome": "Banguecoque",
+      "countryId": "THA",
+      "populacao": 11000000,
+      "pib": 220000000000,
+      "ocupadaPor": null,
+      "lat": 13.75,
+      "lng": 100.5,
+      "cultura": "tai",
+      "lealdade": 55,
+      "recursos": [
+        "turismo",
+        "portos"
+      ],
+      "valorEstrategico": 4
+    },
+    {
+      "id": "PHL-MNL",
+      "nome": "Manila",
+      "countryId": "PHL",
+      "populacao": 14000000,
+      "pib": 110000000000,
+      "ocupadaPor": null,
+      "lat": 14.6,
+      "lng": 120.98,
+      "cultura": "tagala",
+      "lealdade": 55,
+      "recursos": [
+        "portos",
+        "montagem"
+      ],
+      "valorEstrategico": 4
+    },
+    {
+      "id": "BGD-DAC",
+      "nome": "Daca",
+      "countryId": "BGD",
+      "populacao": 22000000,
+      "pib": 80000000000,
+      "ocupadaPor": null,
+      "lat": 23.81,
+      "lng": 90.41,
+      "cultura": "bengali",
+      "lealdade": 45,
+      "recursos": [
+        "têxtil",
+        "governo"
+      ],
+      "valorEstrategico": 3
+    },
+    {
+      "id": "SWE-STO",
+      "nome": "Estocolmo",
+      "countryId": "SWE",
+      "populacao": 1600000,
+      "pib": 150000000000,
+      "ocupadaPor": null,
+      "lat": 59.33,
+      "lng": 18.07,
+      "cultura": "sueca",
+      "lealdade": 70,
+      "recursos": [
+        "tecnologia"
+      ],
+      "valorEstrategico": 3
+    },
+    {
+      "id": "BEL-BRU",
+      "nome": "Bruxelas",
+      "countryId": "BEL",
+      "populacao": 2100000,
+      "pib": 180000000000,
+      "ocupadaPor": null,
+      "lat": 50.85,
+      "lng": 4.35,
+      "cultura": "flamenga",
+      "lealdade": 62,
+      "recursos": [
+        "governo UE",
+        "logística"
+      ],
+      "valorEstrategico": 4
+    },
+    {
+      "id": "CHE-BRN",
+      "nome": "Berna",
+      "countryId": "CHE",
+      "populacao": 800000,
+      "pib": 80000000000,
+      "ocupadaPor": null,
+      "lat": 46.95,
+      "lng": 7.45,
+      "cultura": "suíça-alemã",
+      "lealdade": 75,
+      "recursos": [
+        "governo",
+        "finanças"
+      ],
+      "valorEstrategico": 3
+    },
+    {
+      "id": "ISR-JRS",
+      "nome": "Jerusalém",
+      "countryId": "ISR",
+      "populacao": 2200000,
+      "pib": 120000000000,
+      "ocupadaPor": null,
+      "lat": 31.78,
+      "lng": 35.22,
+      "cultura": "israelita",
+      "lealdade": 55,
+      "recursos": [
+        "governo",
+        "tecnologia"
+      ],
+      "valorEstrategico": 5
+    },
+    {
+      "id": "MAR-RAB",
+      "nome": "Rabat",
+      "countryId": "MAR",
+      "populacao": 1900000,
+      "pib": 25000000000,
+      "ocupadaPor": null,
+      "lat": 34.02,
+      "lng": -6.83,
+      "cultura": "árabe-marroquina",
+      "lealdade": 55,
+      "recursos": [
+        "governo"
+      ],
+      "valorEstrategico": 3
+    },
+    {
+      "id": "DZA-ALG",
+      "nome": "Argel",
+      "countryId": "DZA",
+      "populacao": 3500000,
+      "pib": 40000000000,
+      "ocupadaPor": null,
+      "lat": 36.75,
+      "lng": 3.06,
+      "cultura": "árabe-argelina",
+      "lealdade": 48,
+      "recursos": [
+        "governo",
+        "petróleo"
+      ],
+      "valorEstrategico": 3
+    },
+    {
+      "id": "PER-LIM",
+      "nome": "Lima",
+      "countryId": "PER",
+      "populacao": 11000000,
+      "pib": 110000000000,
+      "ocupadaPor": null,
+      "lat": -12.05,
+      "lng": -77.04,
+      "cultura": "peruana",
+      "lealdade": 50,
+      "recursos": [
+        "governo",
+        "portos"
+      ],
+      "valorEstrategico": 4
+    },
+    {
+      "id": "TUN-TUN",
+      "nome": "Tunes",
+      "countryId": "TUN",
+      "populacao": 2300000,
+      "pib": 15000000000,
+      "ocupadaPor": null,
+      "lat": 36.81,
+      "lng": 10.18,
+      "cultura": "árabe-tunisina",
+      "lealdade": 55,
+      "recursos": [
+        "governo",
+        "portos"
+      ],
+      "valorEstrategico": 3
+    },
+    {
+      "id": "SDN-KRT",
+      "nome": "Cartum",
+      "countryId": "SDN",
+      "populacao": 6000000,
+      "pib": 8000000000,
+      "ocupadaPor": null,
+      "lat": 15.5,
+      "lng": 32.56,
+      "cultura": "árabe-sudanesa",
+      "lealdade": 30,
+      "recursos": [
+        "governo"
+      ],
+      "valorEstrategico": 3
+    },
+    {
+      "id": "AGO-LAD",
+      "nome": "Luanda",
+      "countryId": "AGO",
+      "populacao": 9000000,
+      "pib": 30000000000,
+      "ocupadaPor": null,
+      "lat": -8.81,
+      "lng": 13.23,
+      "cultura": "umbundu",
+      "lealdade": 45,
+      "recursos": [
+        "petróleo",
+        "portos"
+      ],
+      "valorEstrategico": 4
+    },
+    {
+      "id": "COD-KSH",
+      "nome": "Kinshasa",
+      "countryId": "COD",
+      "populacao": 17000000,
+      "pib": 20000000000,
+      "ocupadaPor": null,
+      "lat": -4.32,
+      "lng": 15.31,
+      "cultura": "congolesa",
+      "lealdade": 40,
+      "recursos": [
+        "governo",
+        "minerais"
+      ],
+      "valorEstrategico": 4
+    },
+    {
+      "id": "CMR-YDE",
+      "nome": "Iaundé",
+      "countryId": "CMR",
+      "populacao": 4000000,
+      "pib": 12000000000,
+      "ocupadaPor": null,
+      "lat": 3.87,
+      "lng": 11.52,
+      "cultura": "camaronesa",
+      "lealdade": 45,
+      "recursos": [
+        "governo"
+      ],
+      "valorEstrategico": 3
+    },
+    {
+      "id": "CIV-ABJ",
+      "nome": "Abidjan",
+      "countryId": "CIV",
+      "populacao": 5300000,
+      "pib": 30000000000,
+      "ocupadaPor": null,
+      "lat": 5.36,
+      "lng": -4.01,
+      "cultura": "baulé",
+      "lealdade": 52,
+      "recursos": [
+        "portos",
+        "cacau"
+      ],
+      "valorEstrategico": 4
+    },
+    {
+      "id": "SEN-DKR",
+      "nome": "Dacar",
+      "countryId": "SEN",
+      "populacao": 3200000,
+      "pib": 13000000000,
+      "ocupadaPor": null,
+      "lat": 14.69,
+      "lng": -17.45,
+      "cultura": "uolofe",
+      "lealdade": 58,
+      "recursos": [
+        "portos",
+        "pesca"
+      ],
+      "valorEstrategico": 3
+    },
+    {
+      "id": "UGA-KMP",
+      "nome": "Kampala",
+      "countryId": "UGA",
+      "populacao": 8000000,
+      "pib": 12000000000,
+      "ocupadaPor": null,
+      "lat": 0.32,
+      "lng": 32.59,
+      "cultura": "ganda",
+      "lealdade": 50,
+      "recursos": [
+        "agrícola"
+      ],
+      "valorEstrategico": 3
+    },
+    {
+      "id": "MOZ-MPM",
+      "nome": "Maputo",
+      "countryId": "MOZ",
+      "populacao": 1100000,
+      "pib": 5000000000,
+      "ocupadaPor": null,
+      "lat": -25.97,
+      "lng": 32.57,
+      "cultura": "macua",
+      "lealdade": 45,
+      "recursos": [
+        "portos"
+      ],
+      "valorEstrategico": 3
+    },
+    {
+      "id": "MDG-TNR",
+      "nome": "Antananarivo",
+      "countryId": "MDG",
+      "populacao": 1400000,
+      "pib": 4000000000,
+      "ocupadaPor": null,
+      "lat": -18.88,
+      "lng": 47.51,
+      "cultura": "merina",
+      "lealdade": 48,
+      "recursos": [
+        "agrícola"
+      ],
+      "valorEstrategico": 2
+    },
+    {
+      "id": "ZMB-LUN",
+      "nome": "Lusaca",
+      "countryId": "ZMB",
+      "populacao": 3100000,
+      "pib": 8000000000,
+      "ocupadaPor": null,
+      "lat": -15.39,
+      "lng": 28.32,
+      "cultura": "bemba",
+      "lealdade": 48,
+      "recursos": [
+        "cobre"
+      ],
+      "valorEstrategico": 3
+    },
+    {
+      "id": "SOM-MGQ",
+      "nome": "Mogadíscio",
+      "countryId": "SOM",
+      "populacao": 2500000,
+      "pib": 2500000000,
+      "ocupadaPor": null,
+      "lat": 2.05,
+      "lng": 45.34,
+      "cultura": "somali",
+      "lealdade": 25,
+      "recursos": [
+        "portos"
+      ],
+      "valorEstrategico": 2
+    },
+    {
+      "id": "MLI-BMK",
+      "nome": "Bamako",
+      "countryId": "MLI",
+      "populacao": 2900000,
+      "pib": 5000000000,
+      "ocupadaPor": null,
+      "lat": 12.65,
+      "lng": -8,
+      "cultura": "mandinga",
+      "lealdade": 35,
+      "recursos": [
+        "ouro"
+      ],
+      "valorEstrategico": 2
+    },
+    {
+      "id": "NER-NIM",
+      "nome": "Niamei",
+      "countryId": "NER",
+      "populacao": 1400000,
+      "pib": 3000000000,
+      "ocupadaPor": null,
+      "lat": 13.51,
+      "lng": 2.11,
+      "cultura": "haussa",
+      "lealdade": 30,
+      "recursos": [
+        "urânio"
+      ],
+      "valorEstrategico": 3
+    },
+    {
+      "id": "BFA-OUA",
+      "nome": "Uagadugu",
+      "countryId": "BFA",
+      "populacao": 2600000,
+      "pib": 5000000000,
+      "ocupadaPor": null,
+      "lat": 12.37,
+      "lng": -1.51,
+      "cultura": "mossi",
+      "lealdade": 32,
+      "recursos": [
+        "ouro"
+      ],
+      "valorEstrategico": 2
+    },
+    {
+      "id": "ETH-ADD",
+      "nome": "Adis Abeba",
+      "countryId": "ETH",
+      "populacao": 5000000,
+      "pib": 25000000000,
+      "ocupadaPor": null,
+      "lat": 9.03,
+      "lng": 38.74,
+      "cultura": "amara",
+      "lealdade": 50,
+      "recursos": [
+        "governo"
+      ],
+      "valorEstrategico": 3
+    },
+    {
+      "id": "KEN-NBO",
+      "nome": "Nairóbi",
+      "countryId": "KEN",
+      "populacao": 5500000,
+      "pib": 35000000000,
+      "ocupadaPor": null,
+      "lat": -1.29,
+      "lng": 36.82,
+      "cultura": "kikuyu",
+      "lealdade": 55,
+      "recursos": [
+        "finanças",
+        "portos"
+      ],
+      "valorEstrategico": 4
+    },
+    {
+      "id": "ZWE-HRE",
+      "nome": "Harare",
+      "countryId": "ZWE",
+      "populacao": 1800000,
+      "pib": 6000000000,
+      "ocupadaPor": null,
+      "lat": -17.83,
+      "lng": 31.05,
+      "cultura": "shona",
+      "lealdade": 35,
+      "recursos": [
+        "mineração"
+      ],
+      "valorEstrategico": 2
+    },
+    {
+      "id": "PRT-OPO",
+      "nome": "Porto",
+      "countryId": "PRT",
+      "populacao": 1030000,
+      "pib": 36400000000.0,
+      "ocupadaPor": null,
+      "lat": 41.15,
+      "lng": -8.61,
+      "cultura": "portuguesa",
+      "lealdade": 62,
+      "recursos": [
+        "indústria",
+        "vinho do Porto"
+      ],
+      "valorEstrategico": 3
+    },
+    {
+      "id": "PRT-COI",
+      "nome": "Coimbra",
+      "countryId": "PRT",
+      "populacao": 206000,
+      "pib": 5600000000.0,
+      "ocupadaPor": null,
+      "lat": 40.21,
+      "lng": -8.43,
+      "cultura": "portuguesa",
+      "lealdade": 65,
+      "recursos": [
+        "ensino",
+        "saúde"
+      ],
+      "valorEstrategico": 2
+    },
+    {
+      "id": "ESP-BCN",
+      "nome": "Barcelona",
+      "countryId": "ESP",
+      "populacao": 4800000,
+      "pib": 224000000000.00003,
+      "ocupadaPor": null,
+      "lat": 41.39,
+      "lng": 2.17,
+      "cultura": "catalã",
+      "lealdade": 51,
+      "recursos": [
+        "turismo",
+        "indústria",
+        "portos"
+      ],
+      "valorEstrategico": 4
+    },
+    {
+      "id": "ESP-SEV",
+      "nome": "Sevilha",
+      "countryId": "ESP",
+      "populacao": 2400000,
+      "pib": 64000000000.0,
+      "ocupadaPor": null,
+      "lat": 37.39,
+      "lng": -5.99,
+      "cultura": "andaluz",
+      "lealdade": 59,
+      "recursos": [
+        "agricultura",
+        "turismo"
+      ],
+      "valorEstrategico": 2
+    },
+    {
+      "id": "FRA-LYO",
+      "nome": "Lião",
+      "countryId": "FRA",
+      "populacao": 4760000,
+      "pib": 240000000000.0,
+      "ocupadaPor": null,
+      "lat": 45.76,
+      "lng": 4.84,
+      "cultura": "francesa",
+      "lealdade": 64,
+      "recursos": [
+        "farmacêutica",
+        "biotecnologia"
+      ],
+      "valorEstrategico": 3
+    },
+    {
+      "id": "FRA-MRS",
+      "nome": "Marselha",
+      "countryId": "FRA",
+      "populacao": 3400000,
+      "pib": 150000000000.0,
+      "ocupadaPor": null,
+      "lat": 43.3,
+      "lng": 5.37,
+      "cultura": "francesa",
+      "lealdade": 58,
+      "recursos": [
+        "portos",
+        "petroquímica"
+      ],
+      "valorEstrategico": 4
+    },
+    {
+      "id": "DEU-MUC",
+      "nome": "Munique",
+      "countryId": "DEU",
+      "populacao": 7560000,
+      "pib": 585000000000.0,
+      "ocupadaPor": null,
+      "lat": 48.14,
+      "lng": 11.58,
+      "cultura": "alemã",
+      "lealdade": 71,
+      "recursos": [
+        "automóvel",
+        "tecnologia"
+      ],
+      "valorEstrategico": 4
+    },
+    {
+      "id": "DEU-HAM",
+      "nome": "Hamburgo",
+      "countryId": "DEU",
+      "populacao": 5040000,
+      "pib": 360000000000.0,
+      "ocupadaPor": null,
+      "lat": 53.55,
+      "lng": 9.99,
+      "cultura": "alemã",
+      "lealdade": 70,
+      "recursos": [
+        "portos",
+        "logística"
+      ],
+      "valorEstrategico": 4
+    },
+    {
+      "id": "GBR-MAN",
+      "nome": "Manchester",
+      "countryId": "GBR",
+      "populacao": 5360000,
+      "pib": 217000000000.00003,
+      "ocupadaPor": null,
+      "lat": 53.48,
+      "lng": -2.24,
+      "cultura": "inglesa",
+      "lealdade": 64,
+      "recursos": [
+        "indústria",
+        "media"
+      ],
+      "valorEstrategico": 3
+    },
+    {
+      "id": "GBR-EDB",
+      "nome": "Edimburgo",
+      "countryId": "GBR",
+      "populacao": 2680000,
+      "pib": 124000000000.0,
+      "ocupadaPor": null,
+      "lat": 55.95,
+      "lng": -3.19,
+      "cultura": "escocesa",
+      "lealdade": 59,
+      "recursos": [
+        "finanças",
+        "turismo"
+      ],
+      "valorEstrategico": 3
+    },
+    {
+      "id": "ITA-MIL",
+      "nome": "Milão",
+      "countryId": "ITA",
+      "populacao": 5900000,
+      "pib": 308000000000.0,
+      "ocupadaPor": null,
+      "lat": 45.46,
+      "lng": 9.19,
+      "cultura": "italiana",
+      "lealdade": 53,
+      "recursos": [
+        "finanças",
+        "moda",
+        "indústria"
+      ],
+      "valorEstrategico": 4
+    },
+    {
+      "id": "ITA-NAP",
+      "nome": "Nápoles",
+      "countryId": "ITA",
+      "populacao": 3540000,
+      "pib": 88000000000.0,
+      "ocupadaPor": null,
+      "lat": 40.85,
+      "lng": 14.27,
+      "cultura": "italiana",
+      "lealdade": 46,
+      "recursos": [
+        "portos",
+        "turismo"
+      ],
+      "valorEstrategico": 3
+    },
+    {
+      "id": "POL-KRK",
+      "nome": "Cracóvia",
+      "countryId": "POL",
+      "populacao": 3040000,
+      "pib": 59500000000.00001,
+      "ocupadaPor": null,
+      "lat": 50.06,
+      "lng": 19.94,
+      "cultura": "polaca",
+      "lealdade": 64,
+      "recursos": [
+        "turismo",
+        "carvão",
+        "indústria"
+      ],
+      "valorEstrategico": 3
+    },
+    {
+      "id": "POL-WRO",
+      "nome": "Wrocław",
+      "countryId": "POL",
+      "populacao": 1900000,
+      "pib": 51000000000.0,
+      "ocupadaPor": null,
+      "lat": 51.11,
+      "lng": 17.04,
+      "cultura": "polaca",
+      "lealdade": 63,
+      "recursos": [
+        "tecnologia",
+        "indústria"
+      ],
+      "valorEstrategico": 2
+    },
+    {
+      "id": "SWE-GOT",
+      "nome": "Gotemburgo",
+      "countryId": "SWE",
+      "populacao": 735000,
+      "pib": 53100000000.0,
+      "ocupadaPor": null,
+      "lat": 57.71,
+      "lng": 11.97,
+      "cultura": "sueca",
+      "lealdade": 74,
+      "recursos": [
+        "portos",
+        "automóvel"
+      ],
+      "valorEstrategico": 3
+    },
+    {
+      "id": "SWE-MAL",
+      "nome": "Malmö",
+      "countryId": "SWE",
+      "populacao": 525000,
+      "pib": 35400000000.0,
+      "ocupadaPor": null,
+      "lat": 55.6,
+      "lng": 13.0,
+      "cultura": "sueca",
+      "lealdade": 68,
+      "recursos": [
+        "tecnologia",
+        "construção"
+      ],
+      "valorEstrategico": 2
+    },
+    {
+      "id": "BEL-ANT",
+      "nome": "Antuérpia",
+      "countryId": "BEL",
+      "populacao": 1150000,
+      "pib": 78000000000.0,
+      "ocupadaPor": null,
+      "lat": 51.22,
+      "lng": 4.4,
+      "cultura": "flamenga",
+      "lealdade": 68,
+      "recursos": [
+        "portos",
+        "diamantes",
+        "petroquímica"
+      ],
+      "valorEstrategico": 4
+    },
+    {
+      "id": "CHE-ZUR",
+      "nome": "Zurique",
+      "countryId": "CHE",
+      "populacao": 1131000,
+      "pib": 144000000000.0,
+      "ocupadaPor": null,
+      "lat": 47.37,
+      "lng": 8.54,
+      "cultura": "suíça-alemã",
+      "lealdade": 80,
+      "recursos": [
+        "finanças",
+        "farmacêutica"
+      ],
+      "valorEstrategico": 4
+    },
+    {
+      "id": "UKR-KHR",
+      "nome": "Carcóvia",
+      "countryId": "UKR",
+      "populacao": 3600000,
+      "pib": 14400000000.0,
+      "ocupadaPor": null,
+      "lat": 49.99,
+      "lng": 36.23,
+      "cultura": "ucraniana",
+      "lealdade": 22,
+      "recursos": [
+        "indústria",
+        "agrícola"
+      ],
+      "valorEstrategico": 4
+    },
+    {
+      "id": "UKR-ODS",
+      "nome": "Odesa",
+      "countryId": "UKR",
+      "populacao": 2520000,
+      "pib": 9000000000.0,
+      "ocupadaPor": null,
+      "lat": 46.48,
+      "lng": 30.73,
+      "cultura": "ucraniana",
+      "lealdade": 25,
+      "recursos": [
+        "portos",
+        "turismo"
+      ],
+      "valorEstrategico": 4
+    },
+    {
+      "id": "TUR-IZM",
+      "nome": "Esmirna",
+      "countryId": "TUR",
+      "populacao": 5950000,
+      "pib": 77000000000.0,
+      "ocupadaPor": null,
+      "lat": 38.42,
+      "lng": 27.14,
+      "cultura": "turca",
+      "lealdade": 42,
+      "recursos": [
+        "portos",
+        "agricultura"
+      ],
+      "valorEstrategico": 3
+    },
+    {
+      "id": "KOR-PUS",
+      "nome": "Busan",
+      "countryId": "KOR",
+      "populacao": 3619000,
+      "pib": 136000000000.0,
+      "ocupadaPor": null,
+      "lat": 35.18,
+      "lng": 129.08,
+      "cultura": "coreana",
+      "lealdade": 66,
+      "recursos": [
+        "portos",
+        "shipbuilding"
+      ],
+      "valorEstrategico": 4
+    },
+    {
+      "id": "KOR-ICN",
+      "nome": "Incheon",
+      "countryId": "KOR",
+      "populacao": 3102000,
+      "pib": 102000000000.0,
+      "ocupadaPor": null,
+      "lat": 37.46,
+      "lng": 126.71,
+      "cultura": "coreana",
+      "lealdade": 68,
+      "recursos": [
+        "portos",
+        "logística"
+      ],
+      "valorEstrategico": 3
+    },
+    {
+      "id": "VNM-HCM",
+      "nome": "Cidade de Ho Chi Minh",
+      "countryId": "VNM",
+      "populacao": 9900000,
+      "pib": 86000000000.0,
+      "ocupadaPor": null,
+      "lat": 10.82,
+      "lng": 106.63,
+      "cultura": "vietnamita",
+      "lealdade": 63,
+      "recursos": [
+        "indústria",
+        "portos"
+      ],
+      "valorEstrategico": 4
+    },
+    {
+      "id": "VNM-HPH",
+      "nome": "Haiphong",
+      "countryId": "VNM",
+      "populacao": 3960000,
+      "pib": 17200000000.0,
+      "ocupadaPor": null,
+      "lat": 20.86,
+      "lng": 106.68,
+      "cultura": "vietnamita",
+      "lealdade": 65,
+      "recursos": [
+        "portos",
+        "indústria"
+      ],
+      "valorEstrategico": 3
+    },
+    {
+      "id": "THA-CNX",
+      "nome": "Chiang Mai",
+      "countryId": "THA",
+      "populacao": 3500000,
+      "pib": 21600000000.0,
+      "ocupadaPor": null,
+      "lat": 18.79,
+      "lng": 98.99,
+      "cultura": "tai",
+      "lealdade": 49,
+      "recursos": [
+        "turismo",
+        "agrícola"
+      ],
+      "valorEstrategico": 2
+    },
+    {
+      "id": "THA-PHK",
+      "nome": "Phuket",
+      "countryId": "THA",
+      "populacao": 1400000,
+      "pib": 16200000000.0,
+      "ocupadaPor": null,
+      "lat": 7.88,
+      "lng": 98.39,
+      "cultura": "tai",
+      "lealdade": 51,
+      "recursos": [
+        "turismo"
+      ],
+      "valorEstrategico": 2
+    },
+    {
+      "id": "PHL-CEB",
+      "nome": "Cebu",
+      "countryId": "PHL",
+      "populacao": 8050000,
+      "pib": 30800000000.000004,
+      "ocupadaPor": null,
+      "lat": 10.32,
+      "lng": 123.9,
+      "cultura": "cebuano",
+      "lealdade": 53,
+      "recursos": [
+        "portos",
+        "turismo"
+      ],
+      "valorEstrategico": 3
+    },
+    {
+      "id": "PHL-DAV",
+      "nome": "Davao",
+      "countryId": "PHL",
+      "populacao": 6900000,
+      "pib": 22000000000.0,
+      "ocupadaPor": null,
+      "lat": 7.19,
+      "lng": 125.46,
+      "cultura": "tagala",
+      "lealdade": 50,
+      "recursos": [
+        "agrícola",
+        "montagem"
+      ],
+      "valorEstrategico": 2
+    },
+    {
+      "id": "BGD-CHT",
+      "nome": "Chittagong",
+      "countryId": "BGD",
+      "populacao": 12110000,
+      "pib": 36800000000.0,
+      "ocupadaPor": null,
+      "lat": 22.36,
+      "lng": 91.8,
+      "cultura": "bengali",
+      "lealdade": 40,
+      "recursos": [
+        "portos",
+        "têxtil"
+      ],
+      "valorEstrategico": 4
+    },
+    {
+      "id": "IRN-MHD",
+      "nome": "Mashhad",
+      "countryId": "IRN",
+      "populacao": 8900000,
+      "pib": 28700000000.000004,
+      "ocupadaPor": null,
+      "lat": 36.3,
+      "lng": 59.61,
+      "cultura": "persa",
+      "lealdade": 38,
+      "recursos": [
+        "turismo religioso",
+        "agrícola"
+      ],
+      "valorEstrategico": 2
+    },
+    {
+      "id": "IRN-IFN",
+      "nome": "Isfahan",
+      "countryId": "IRN",
+      "populacao": 5340000,
+      "pib": 24600000000.0,
+      "ocupadaPor": null,
+      "lat": 32.65,
+      "lng": 51.67,
+      "cultura": "persa",
+      "lealdade": 40,
+      "recursos": [
+        "indústria",
+        "petroquímica"
+      ],
+      "valorEstrategico": 3
+    },
+    {
+      "id": "SAU-JED",
+      "nome": "Jidá",
+      "countryId": "SAU",
+      "populacao": 4680000,
+      "pib": 110000000000.0,
+      "ocupadaPor": null,
+      "lat": 21.49,
+      "lng": 39.19,
+      "cultura": "árabe-saudita",
+      "lealdade": 50,
+      "recursos": [
+        "portos",
+        "turismo religioso"
+      ],
+      "valorEstrategico": 4
+    },
+    {
+      "id": "SAU-DMM",
+      "nome": "Dammam",
+      "countryId": "SAU",
+      "populacao": 2880000,
+      "pib": 165000000000.0,
+      "ocupadaPor": null,
+      "lat": 26.42,
+      "lng": 50.1,
+      "cultura": "árabe-saudita",
+      "lealdade": 53,
+      "recursos": [
+        "petróleo",
+        "petroquímica"
+      ],
+      "valorEstrategico": 5
+    },
+    {
+      "id": "ARG-COR",
+      "nome": "Córdoba",
+      "countryId": "ARG",
+      "populacao": 4600000,
+      "pib": 51200000000.0,
+      "ocupadaPor": null,
+      "lat": -31.42,
+      "lng": -64.19,
+      "cultura": "argentina",
+      "lealdade": 41,
+      "recursos": [
+        "indústria",
+        "agrícola"
+      ],
+      "valorEstrategico": 3
+    },
+    {
+      "id": "ARG-ROS",
+      "nome": "Rosário",
+      "countryId": "ARG",
+      "populacao": 2760000,
+      "pib": 32000000000.0,
+      "ocupadaPor": null,
+      "lat": -32.94,
+      "lng": -60.64,
+      "cultura": "argentina",
+      "lealdade": 36,
+      "recursos": [
+        "portos",
+        "agrícola"
+      ],
+      "valorEstrategico": 3
+    },
+    {
+      "id": "COL-MED",
+      "nome": "Medellín",
+      "countryId": "COL",
+      "populacao": 5200000,
+      "pib": 43200000000.0,
+      "ocupadaPor": null,
+      "lat": 6.25,
+      "lng": -75.57,
+      "cultura": "colombiana",
+      "lealdade": 51,
+      "recursos": [
+        "indústria",
+        "têxtil"
+      ],
+      "valorEstrategico": 3
+    },
+    {
+      "id": "COL-CAL",
+      "nome": "Cali",
+      "countryId": "COL",
+      "populacao": 3640000,
+      "pib": 21600000000.0,
+      "ocupadaPor": null,
+      "lat": 3.45,
+      "lng": -76.53,
+      "cultura": "colombiana",
+      "lealdade": 48,
+      "recursos": [
+        "agrícola",
+        "açúcar"
+      ],
+      "valorEstrategico": 2
+    },
+    {
+      "id": "CHL-VLP",
+      "nome": "Valparaíso",
+      "countryId": "CHL",
+      "populacao": 1170000,
+      "pib": 16000000000.0,
+      "ocupadaPor": null,
+      "lat": -33.04,
+      "lng": -71.62,
+      "cultura": "chilena",
+      "lealdade": 62,
+      "recursos": [
+        "portos",
+        "turismo"
+      ],
+      "valorEstrategico": 3
+    },
+    {
+      "id": "CHL-CNC",
+      "nome": "Concepción",
+      "countryId": "CHL",
+      "populacao": 1170000,
+      "pib": 16000000000.0,
+      "ocupadaPor": null,
+      "lat": -36.82,
+      "lng": -73.05,
+      "cultura": "chilena",
+      "lealdade": 60,
+      "recursos": [
+        "indústria",
+        "madeira"
+      ],
+      "valorEstrategico": 2
+    },
+    {
+      "id": "PER-ARQ",
+      "nome": "Arequipa",
+      "countryId": "PER",
+      "populacao": 2040000,
+      "pib": 15000000000.0,
+      "ocupadaPor": null,
+      "lat": -16.4,
+      "lng": -71.53,
+      "cultura": "peruana",
+      "lealdade": 54,
+      "recursos": [
+        "mineração",
+        "agrícola"
+      ],
+      "valorEstrategico": 3
+    },
+    {
+      "id": "PER-TRU",
+      "nome": "Trujillo",
+      "countryId": "PER",
+      "populacao": 1360000,
+      "pib": 7500000000.0,
+      "ocupadaPor": null,
+      "lat": -8.11,
+      "lng": -79.03,
+      "cultura": "peruana",
+      "lealdade": 52,
+      "recursos": [
+        "agrícola",
+        "pesca"
+      ],
+      "valorEstrategico": 2
+    },
+    {
+      "id": "CAN-TOR",
+      "nome": "Toronto",
+      "countryId": "CAN",
+      "populacao": 5460000,
+      "pib": 396000000000.0,
+      "ocupadaPor": null,
+      "lat": 43.65,
+      "lng": -79.38,
+      "cultura": "canadense",
+      "lealdade": 72,
+      "recursos": [
+        "finanças",
+        "tecnologia"
+      ],
+      "valorEstrategico": 4
+    },
+    {
+      "id": "CAN-MTL",
+      "nome": "Montreal",
+      "countryId": "CAN",
+      "populacao": 3120000,
+      "pib": 220000000000.0,
+      "ocupadaPor": null,
+      "lat": 45.5,
+      "lng": -73.57,
+      "cultura": "quebecense",
+      "lealdade": 66,
+      "recursos": [
+        "aeroespacial",
+        "tecnologia"
+      ],
+      "valorEstrategico": 3
+    },
+    {
+      "id": "AGO-BGU",
+      "nome": "Benguela",
+      "countryId": "AGO",
+      "populacao": 2450000,
+      "pib": 5400000000.0,
+      "ocupadaPor": null,
+      "lat": -12.78,
+      "lng": 13.87,
+      "cultura": "ovimbundu",
+      "lealdade": 40,
+      "recursos": [
+        "portos",
+        "pesca",
+        "agrícola"
+      ],
+      "valorEstrategico": 4
+    },
+    {
+      "id": "AGO-HUA",
+      "nome": "Huíla",
+      "countryId": "AGO",
+      "populacao": 1750000,
+      "pib": 3600000000.0,
+      "ocupadaPor": null,
+      "lat": -14.92,
+      "lng": 13.46,
+      "cultura": "nvanyeka",
+      "lealdade": 38,
+      "recursos": [
+        "agrícola",
+        "gado"
+      ],
+      "valorEstrategico": 2
+    },
+    {
+      "id": "AGO-CAB",
+      "nome": "Cabinda",
+      "countryId": "AGO",
+      "populacao": 700000,
+      "pib": 9000000000.0,
+      "ocupadaPor": null,
+      "lat": -5.55,
+      "lng": 12.19,
+      "cultura": "fiote",
+      "lealdade": 30,
+      "recursos": [
+        "petróleo"
+      ],
+      "valorEstrategico": 5
+    },
+    {
+      "id": "MOZ-BRA",
+      "nome": "Beira",
+      "countryId": "MOZ",
+      "populacao": 1650000,
+      "pib": 1200000000.0,
+      "ocupadaPor": null,
+      "lat": -19.84,
+      "lng": 34.84,
+      "cultura": "sena",
+      "lealdade": 42,
+      "recursos": [
+        "portos",
+        "corredor logístico"
+      ],
+      "valorEstrategico": 4
+    },
+    {
+      "id": "MOZ-NPU",
+      "nome": "Nampula",
+      "countryId": "MOZ",
+      "populacao": 2640000,
+      "pib": 1000000000.0,
+      "ocupadaPor": null,
+      "lat": -15.12,
+      "lng": 39.27,
+      "cultura": "macua",
+      "lealdade": 40,
+      "recursos": [
+        "algodão",
+        "agricultura"
+      ],
+      "valorEstrategico": 2
+    },
+    {
+      "id": "ZAF-JNB",
+      "nome": "Joanesburgo",
+      "countryId": "ZAF",
+      "populacao": 4800000,
+      "pib": 53200000000.00001,
+      "ocupadaPor": null,
+      "lat": -26.2,
+      "lng": 28.05,
+      "cultura": "zulu",
+      "lealdade": 42,
+      "recursos": [
+        "ouro",
+        "finanças",
+        "indústria"
+      ],
+      "valorEstrategico": 5
+    },
+    {
+      "id": "ZAF-CPT",
+      "nome": "Cidade do Cabo",
+      "countryId": "ZAF",
+      "populacao": 3600000,
+      "pib": 30400000000.0,
+      "ocupadaPor": null,
+      "lat": -33.92,
+      "lng": 18.42,
+      "cultura": "afrikaans",
+      "lealdade": 39,
+      "recursos": [
+        "turismo",
+        "portos",
+        "tecnologia"
+      ],
+      "valorEstrategico": 4
+    },
+    {
+      "id": "EGY-ALX",
+      "nome": "Alexandria",
+      "countryId": "EGY",
+      "populacao": 11000000,
+      "pib": 48000000000.0,
+      "ocupadaPor": null,
+      "lat": 31.2,
+      "lng": 29.92,
+      "cultura": "árabe-egípcia",
+      "lealdade": 42,
+      "recursos": [
+        "portos",
+        "turismo",
+        "indústria"
+      ],
+      "valorEstrategico": 4
+    },
+    {
+      "id": "EGY-GIS",
+      "nome": "Giza",
+      "countryId": "EGY",
+      "populacao": 11000000,
+      "pib": 24000000000.0,
+      "ocupadaPor": null,
+      "lat": 30.01,
+      "lng": 31.21,
+      "cultura": "árabe-egípcia",
+      "lealdade": 40,
+      "recursos": [
+        "turismo"
+      ],
+      "valorEstrategico": 3
+    },
+    {
+      "id": "COD-LUB",
+      "nome": "Lubumbashi",
+      "countryId": "COD",
+      "populacao": 7140000,
+      "pib": 9750000000.0,
+      "ocupadaPor": null,
+      "lat": -11.69,
+      "lng": 27.53,
+      "cultura": "lubakat",
+      "lealdade": 27,
+      "recursos": [
+        "cobre",
+        "cobalto",
+        "mineração"
+      ],
+      "valorEstrategico": 5
+    },
+    {
+      "id": "COD-GOM",
+      "nome": "Goma",
+      "countryId": "COD",
+      "populacao": 4080000,
+      "pib": 1950000000.0,
+      "ocupadaPor": null,
+      "lat": -1.68,
+      "lng": 29.22,
+      "cultura": "nyarwanda",
+      "lealdade": 22,
+      "recursos": [
+        "coltan",
+        "agrícola"
+      ],
+      "valorEstrategico": 3
+    },
+    {
+      "id": "CMR-DLA",
+      "nome": "Douala",
+      "countryId": "CMR",
+      "populacao": 3640000,
+      "pib": 10000000000.0,
+      "ocupadaPor": null,
+      "lat": 4.05,
+      "lng": 9.7,
+      "cultura": "duala",
+      "lealdade": 45,
+      "recursos": [
+        "portos",
+        "petróleo",
+        "indústria"
+      ],
+      "valorEstrategico": 5
+    },
+    {
+      "id": "CMR-BAF",
+      "nome": "Bafoussam",
+      "countryId": "CMR",
+      "populacao": 1680000,
+      "pib": 2000000000.0,
+      "ocupadaPor": null,
+      "lat": 5.48,
+      "lng": 10.42,
+      "cultura": "bamileke",
+      "lealdade": 48,
+      "recursos": [
+        "agrícola",
+        "café"
+      ],
+      "valorEstrategico": 2
+    },
+    {
+      "id": "CIV-YMS",
+      "nome": "Yamoussoukro",
+      "countryId": "CIV",
+      "populacao": 1450000,
+      "pib": 3400000000.0,
+      "ocupadaPor": null,
+      "lat": 6.83,
+      "lng": -5.3,
+      "cultura": "baulé",
+      "lealdade": 57,
+      "recursos": [
+        "agrícola"
+      ],
+      "valorEstrategico": 2
+    },
+    {
+      "id": "SEN-TIE",
+      "nome": "Touba",
+      "countryId": "SEN",
+      "populacao": 1260000,
+      "pib": 1400000000.0,
+      "ocupadaPor": null,
+      "lat": 14.85,
+      "lng": -15.89,
+      "cultura": "uolofe",
+      "lealdade": 65,
+      "recursos": [
+        "turismo religioso"
+      ],
+      "valorEstrategico": 2
+    },
+    {
+      "id": "UGA-ENT",
+      "nome": "Entebbe",
+      "countryId": "UGA",
+      "populacao": 2350000,
+      "pib": 1800000000.0,
+      "ocupadaPor": null,
+      "lat": 0.06,
+      "lng": 32.46,
+      "cultura": "ganda",
+      "lealdade": 48,
+      "recursos": [
+        "turismo",
+        "pesca"
+      ],
+      "valorEstrategico": 2
+    },
+    {
+      "id": "UGA-GUL",
+      "nome": "Gulu",
+      "countryId": "UGA",
+      "populacao": 1880000,
+      "pib": 900000000.0,
+      "ocupadaPor": null,
+      "lat": 2.78,
+      "lng": 32.3,
+      "cultura": "acholi",
+      "lealdade": 40,
+      "recursos": [
+        "agrícola"
+      ],
+      "valorEstrategico": 2
+    },
+    {
+      "id": "MDG-TOL",
+      "nome": "Toamasina",
+      "countryId": "MDG",
+      "populacao": 2400000,
+      "pib": 1120000000.0,
+      "ocupadaPor": null,
+      "lat": -18.15,
+      "lng": 49.4,
+      "cultura": "betsimisaraka",
+      "lealdade": 52,
+      "recursos": [
+        "portos",
+        "vanilha"
+      ],
+      "valorEstrategico": 3
+    },
+    {
+      "id": "ZMB-NDO",
+      "nome": "Ndola",
+      "countryId": "ZMB",
+      "populacao": 2000000,
+      "pib": 3900000000.0,
+      "ocupadaPor": null,
+      "lat": -12.96,
+      "lng": 28.64,
+      "cultura": "bemba",
+      "lealdade": 50,
+      "recursos": [
+        "cobre",
+        "cobalto"
+      ],
+      "valorEstrategico": 4
+    },
+    {
+      "id": "SOM-KIS",
+      "nome": "Kismayo",
+      "countryId": "SOM",
+      "populacao": 1080000,
+      "pib": 400000000.0,
+      "ocupadaPor": null,
+      "lat": -0.36,
+      "lng": 42.55,
+      "cultura": "somali",
+      "lealdade": 10,
+      "recursos": [
+        "portos",
+        "pesca"
+      ],
+      "valorEstrategico": 3
+    },
+    {
+      "id": "MLI-Sik",
+      "nome": "Sikasso",
+      "countryId": "MLI",
+      "populacao": 1540000,
+      "pib": 1140000000.0,
+      "ocupadaPor": null,
+      "lat": 11.32,
+      "lng": -5.67,
+      "cultura": "bambara",
+      "lealdade": 27,
+      "recursos": [
+        "algodão",
+        "agrícola"
+      ],
+      "valorEstrategico": 2
+    },
+    {
+      "id": "NER-ZND",
+      "nome": "Zinder",
+      "countryId": "NER",
+      "populacao": 2700000,
+      "pib": 800000000.0,
+      "ocupadaPor": null,
+      "lat": 13.81,
+      "lng": 8.99,
+      "cultura": "hauçá",
+      "lealdade": 20,
+      "recursos": [
+        "agrícola",
+        "gado"
+      ],
+      "valorEstrategico": 2
+    },
+    {
+      "id": "NER-AGD",
+      "nome": "Agadez",
+      "countryId": "NER",
+      "populacao": 810000,
+      "pib": 1600000000.0,
+      "ocupadaPor": null,
+      "lat": 16.97,
+      "lng": 7.99,
+      "cultura": "tuaregue",
+      "lealdade": 17,
+      "recursos": [
+        "urânio"
+      ],
+      "valorEstrategico": 4
+    },
+    {
+      "id": "BFA-BOB",
+      "nome": "Bobo-Dioulasso",
+      "countryId": "BFA",
+      "populacao": 2300000,
+      "pib": 1520000000.0,
+      "ocupadaPor": null,
+      "lat": 11.17,
+      "lng": -4.3,
+      "cultura": "jula",
+      "lealdade": 25,
+      "recursos": [
+        "agrícola",
+        "indústria"
+      ],
+      "valorEstrategico": 2
+    },
+    {
+      "id": "ETH-ADR",
+      "nome": "Adama",
+      "countryId": "ETH",
+      "populacao": 10160000,
+      "pib": 7800000000.0,
+      "ocupadaPor": null,
+      "lat": 8.54,
+      "lng": 39.27,
+      "cultura": "oromo",
+      "lealdade": 30,
+      "recursos": [
+        "agrícola",
+        "logística"
+      ],
+      "valorEstrategico": 2
+    },
+    {
+      "id": "ETH-GON",
+      "nome": "Gondar",
+      "countryId": "ETH",
+      "populacao": 8890000,
+      "pib": 5200000000.0,
+      "ocupadaPor": null,
+      "lat": 12.6,
+      "lng": 37.47,
+      "cultura": "amara",
+      "lealdade": 32,
+      "recursos": [
+        "turismo",
+        "agrícola"
+      ],
+      "valorEstrategico": 2
+    },
+    {
+      "id": "KEN-MBA",
+      "nome": "Mombaça",
+      "countryId": "KEN",
+      "populacao": 3850000,
+      "pib": 11000000000.0,
+      "ocupadaPor": null,
+      "lat": -4.04,
+      "lng": 39.66,
+      "cultura": "swahili",
+      "lealdade": 55,
+      "recursos": [
+        "portos",
+        "turismo"
+      ],
+      "valorEstrategico": 4
+    },
+    {
+      "id": "KEN-KSM",
+      "nome": "Kisumu",
+      "countryId": "KEN",
+      "populacao": 2200000,
+      "pib": 3300000000.0,
+      "ocupadaPor": null,
+      "lat": -0.09,
+      "lng": 34.77,
+      "cultura": "luo",
+      "lealdade": 53,
+      "recursos": [
+        "pesca",
+        "agrícola"
+      ],
+      "valorEstrategico": 2
+    },
+    {
+      "id": "ZWE-BUL",
+      "nome": "Bulavaio",
+      "countryId": "ZWE",
+      "populacao": 1600000,
+      "pib": 2500000000.0,
+      "ocupadaPor": null,
+      "lat": -20.15,
+      "lng": 28.58,
+      "cultura": "ndebele",
+      "lealdade": 25,
+      "recursos": [
+        "indústria",
+        "mineração"
+      ],
+      "valorEstrategico": 3
+    },
+    {
+      "id": "SDN-OBD",
+      "nome": "Ondurmã",
+      "countryId": "SDN",
+      "populacao": 7050000,
+      "pib": 3500000000.0,
+      "ocupadaPor": null,
+      "lat": 15.65,
+      "lng": 32.48,
+      "cultura": "árabe-sudanesa",
+      "lealdade": 17,
+      "recursos": [
+        "indústria",
+        "comércio"
+      ],
+      "valorEstrategico": 3
+    },
+    {
+      "id": "SDN-PTZ",
+      "nome": "Port Sudão",
+      "countryId": "SDN",
+      "populacao": 1410000,
+      "pib": 1750000000.0,
+      "ocupadaPor": null,
+      "lat": 19.62,
+      "lng": 37.22,
+      "cultura": "beja",
+      "lealdade": 22,
+      "recursos": [
+        "portos",
+        "petróleo"
+      ],
+      "valorEstrategico": 4
+    },
+    {
+      "id": "TUN-SFX",
+      "nome": "Sfax",
+      "countryId": "TUN",
+      "populacao": 1200000,
+      "pib": 5000000000.0,
+      "ocupadaPor": null,
+      "lat": 34.74,
+      "lng": 10.76,
+      "cultura": "árabe-tunisina",
+      "lealdade": 57,
+      "recursos": [
+        "portos",
+        "agricultura",
+        "fosfatos"
+      ],
+      "valorEstrategico": 3
+    },
+    {
+      "id": "DZA-ORN",
+      "nome": "Orão",
+      "countryId": "DZA",
+      "populacao": 4500000,
+      "pib": 17600000000.0,
+      "ocupadaPor": null,
+      "lat": 35.7,
+      "lng": -0.64,
+      "cultura": "árabe-argelina",
+      "lealdade": 47,
+      "recursos": [
+        "portos",
+        "indústria"
+      ],
+      "valorEstrategico": 3
+    },
+    {
+      "id": "DZA-CST",
+      "nome": "Constantina",
+      "countryId": "DZA",
+      "populacao": 2700000,
+      "pib": 8800000000.0,
+      "ocupadaPor": null,
+      "lat": 36.37,
+      "lng": 6.61,
+      "cultura": "árabe-argelina",
+      "lealdade": 48,
+      "recursos": [
+        "agrícola",
+        "comércio"
+      ],
+      "valorEstrategico": 2
+    },
+    {
+      "id": "MAR-CAS",
+      "nome": "Casablanca",
+      "countryId": "MAR",
+      "populacao": 4810000,
+      "pib": 28000000000.0,
+      "ocupadaPor": null,
+      "lat": 33.59,
+      "lng": -7.59,
+      "cultura": "árabe-marroquina",
+      "lealdade": 55,
+      "recursos": [
+        "portos",
+        "indústria",
+        "finanças"
+      ],
+      "valorEstrategico": 5
+    },
+    {
+      "id": "MAR-MAR",
+      "nome": "Marrakech",
+      "countryId": "MAR",
+      "populacao": 2220000,
+      "pib": 9800000000.0,
+      "ocupadaPor": null,
+      "lat": 31.62,
+      "lng": -7.98,
+      "cultura": "árabe-marroquina",
+      "lealdade": 59,
+      "recursos": [
+        "turismo",
+        "agrícola"
+      ],
+      "valorEstrategico": 3
+    },
+    {
+      "id": "ISR-TLV",
+      "nome": "Telavive",
+      "countryId": "ISR",
+      "populacao": 1940000,
+      "pib": 162000000000.0,
+      "ocupadaPor": null,
+      "lat": 32.09,
+      "lng": 34.78,
+      "cultura": "israelita",
+      "lealdade": 53,
+      "recursos": [
+        "tecnologia",
+        "finanças"
+      ],
+      "valorEstrategico": 5
+    },
+    {
+      "id": "ISR-HFA",
+      "nome": "Haifa",
+      "countryId": "ISR",
+      "populacao": 873000,
+      "pib": 54000000000.0,
+      "ocupadaPor": null,
+      "lat": 32.79,
+      "lng": 34.99,
+      "cultura": "israelita",
+      "lealdade": 52,
+      "recursos": [
+        "portos",
+        "petroquímica"
+      ],
+      "valorEstrategico": 4
+    },
+    {
+      "id": "AUS-SYD",
+      "nome": "Sidney",
+      "countryId": "AUS",
+      "populacao": 5300000,
+      "pib": 374000000000.0,
+      "ocupadaPor": null,
+      "lat": -33.87,
+      "lng": 151.21,
+      "cultura": "australiana",
+      "lealdade": 69,
+      "recursos": [
+        "finanças",
+        "turismo",
+        "portos"
+      ],
+      "valorEstrategico": 4
+    },
+    {
+      "id": "AUS-MEL",
+      "nome": "Melbourne",
+      "countryId": "AUS",
+      "populacao": 4505000,
+      "pib": 272000000000.0,
+      "ocupadaPor": null,
+      "lat": -37.81,
+      "lng": 144.96,
+      "cultura": "australiana",
+      "lealdade": 70,
+      "recursos": [
+        "finanças",
+        "indústria"
+      ],
+      "valorEstrategico": 3
+    }
+  ],
+  "relacoes": [
+    {
+      "a": "USA",
+      "b": "CHN",
+      "valor": -35
+    },
+    {
+      "a": "USA",
+      "b": "RUS",
+      "valor": -60
+    },
+    {
+      "a": "USA",
+      "b": "IND",
+      "valor": 20
+    },
+    {
+      "a": "USA",
+      "b": "DEU",
+      "valor": 55
+    },
+    {
+      "a": "USA",
+      "b": "FRA",
+      "valor": 50
+    },
+    {
+      "a": "USA",
+      "b": "GBR",
+      "valor": 65
+    },
+    {
+      "a": "USA",
+      "b": "JPN",
+      "valor": 60
+    },
+    {
+      "a": "USA",
+      "b": "BRA",
+      "valor": 30
+    },
+    {
+      "a": "USA",
+      "b": "PRT",
+      "valor": 45
+    },
+    {
+      "a": "USA",
+      "b": "CAN",
+      "valor": 70
+    },
+    {
+      "a": "USA",
+      "b": "MEX",
+      "valor": 35
+    },
+    {
+      "a": "USA",
+      "b": "KOR",
+      "valor": 55
+    },
+    {
+      "a": "USA",
+      "b": "UKR",
+      "valor": 50
+    },
+    {
+      "a": "USA",
+      "b": "SAU",
+      "valor": 40
+    },
+    {
+      "a": "CHN",
+      "b": "RUS",
+      "valor": 40
+    },
+    {
+      "a": "CHN",
+      "b": "IND",
+      "valor": -25
+    },
+    {
+      "a": "CHN",
+      "b": "JPN",
+      "valor": -20
+    },
+    {
+      "a": "CHN",
+      "b": "KOR",
+      "valor": -10
+    },
+    {
+      "a": "CHN",
+      "b": "VNM",
+      "valor": 15
+    },
+    {
+      "a": "CHN",
+      "b": "IDN",
+      "valor": 25
+    },
+    {
+      "a": "CHN",
+      "b": "AUS",
+      "valor": 10
+    },
+    {
+      "a": "RUS",
+      "b": "DEU",
+      "valor": -30
+    },
+    {
+      "a": "RUS",
+      "b": "FRA",
+      "valor": -25
+    },
+    {
+      "a": "RUS",
+      "b": "GBR",
+      "valor": -45
+    },
+    {
+      "a": "RUS",
+      "b": "POL",
+      "valor": -50
+    },
+    {
+      "a": "RUS",
+      "b": "UKR",
+      "valor": -85
+    },
+    {
+      "a": "RUS",
+      "b": "TUR",
+      "valor": -15
+    },
+    {
+      "a": "RUS",
+      "b": "IRN",
+      "valor": 30
+    },
+    {
+      "a": "DEU",
+      "b": "FRA",
+      "valor": 60
+    },
+    {
+      "a": "DEU",
+      "b": "GBR",
+      "valor": 50
+    },
+    {
+      "a": "DEU",
+      "b": "POL",
+      "valor": 55
+    },
+    {
+      "a": "DEU",
+      "b": "ITA",
+      "valor": 58
+    },
+    {
+      "a": "DEU",
+      "b": "ESP",
+      "valor": 50
+    },
+    {
+      "a": "FRA",
+      "b": "GBR",
+      "valor": 55
+    },
+    {
+      "a": "FRA",
+      "b": "PRT",
+      "valor": 65
+    },
+    {
+      "a": "FRA",
+      "b": "ESP",
+      "valor": 58
+    },
+    {
+      "a": "FRA",
+      "b": "ITA",
+      "valor": 60
+    },
+    {
+      "a": "GBR",
+      "b": "PRT",
+      "valor": 60
+    },
+    {
+      "a": "GBR",
+      "b": "ESP",
+      "valor": 45
+    },
+    {
+      "a": "GBR",
+      "b": "AUS",
+      "valor": 65
+    },
+    {
+      "a": "ESP",
+      "b": "PRT",
+      "valor": 70
+    },
+    {
+      "a": "ESP",
+      "b": "ARG",
+      "valor": 50
+    },
+    {
+      "a": "ESP",
+      "b": "COL",
+      "valor": 45
+    },
+    {
+      "a": "ESP",
+      "b": "CHL",
+      "valor": 48
+    },
+    {
+      "a": "PRT",
+      "b": "BRA",
+      "valor": 70
+    },
+    {
+      "a": "BRA",
+      "b": "ARG",
+      "valor": 35
+    },
+    {
+      "a": "BRA",
+      "b": "COL",
+      "valor": 40
+    },
+    {
+      "a": "BRA",
+      "b": "CHL",
+      "valor": 30
+    },
+    {
+      "a": "BRA",
+      "b": "MEX",
+      "valor": 45
+    },
+    {
+      "a": "IND",
+      "b": "BRA",
+      "valor": 25
+    },
+    {
+      "a": "IND",
+      "b": "PAK",
+      "valor": -70
+    },
+    {
+      "a": "IND",
+      "b": "RUS",
+      "valor": 30
+    },
+    {
+      "a": "IND",
+      "b": "IDN",
+      "valor": 20
+    },
+    {
+      "a": "PAK",
+      "b": "CHN",
+      "valor": 50
+    },
+    {
+      "a": "THA",
+      "b": "CHN",
+      "valor": 25
+    },
+    {
+      "a": "THA",
+      "b": "USA",
+      "valor": 30
+    },
+    {
+      "a": "PHL",
+      "b": "USA",
+      "valor": 55
+    },
+    {
+      "a": "PHL",
+      "b": "CHN",
+      "valor": -10
+    },
+    {
+      "a": "BGD",
+      "b": "IND",
+      "valor": 20
+    },
+    {
+      "a": "BGD",
+      "b": "PAK",
+      "valor": -15
+    },
+    {
+      "a": "SWE",
+      "b": "DEU",
+      "valor": 50
+    },
+    {
+      "a": "SWE",
+      "b": "GBR",
+      "valor": 55
+    },
+    {
+      "a": "SWE",
+      "b": "RUS",
+      "valor": -30
+    },
+    {
+      "a": "BEL",
+      "b": "FRA",
+      "valor": 60
+    },
+    {
+      "a": "BEL",
+      "b": "DEU",
+      "valor": 55
+    },
+    {
+      "a": "BEL",
+      "b": "GBR",
+      "valor": 50
+    },
+    {
+      "a": "CHE",
+      "b": "DEU",
+      "valor": 55
+    },
+    {
+      "a": "CHE",
+      "b": "FRA",
+      "valor": 50
+    },
+    {
+      "a": "CHE",
+      "b": "ITA",
+      "valor": 45
+    },
+    {
+      "a": "ISR",
+      "b": "USA",
+      "valor": 80
+    },
+    {
+      "a": "ISR",
+      "b": "IRN",
+      "valor": -90
+    },
+    {
+      "a": "ISR",
+      "b": "SAU",
+      "valor": -20
+    },
+    {
+      "a": "ISR",
+      "b": "EGY",
+      "valor": -15
+    },
+    {
+      "a": "ISR",
+      "b": "TUR",
+      "valor": -25
+    },
+    {
+      "a": "MAR",
+      "b": "ESP",
+      "valor": 40
+    },
+    {
+      "a": "MAR",
+      "b": "FRA",
+      "valor": 45
+    },
+    {
+      "a": "MAR",
+      "b": "DZA",
+      "valor": -30
+    },
+    {
+      "a": "DZA",
+      "b": "FRA",
+      "valor": 30
+    },
+    {
+      "a": "DZA",
+      "b": "RUS",
+      "valor": 25
+    },
+    {
+      "a": "DZA",
+      "b": "MAR",
+      "valor": -30
+    },
+    {
+      "a": "PER",
+      "b": "BRA",
+      "valor": 35
+    },
+    {
+      "a": "PER",
+      "b": "CHL",
+      "valor": 25
+    },
+    {
+      "a": "PER",
+      "b": "USA",
+      "valor": 30
+    },
+    {
+      "a": "PER",
+      "b": "ARG",
+      "valor": 20
+    },
+    {
+      "a": "TUN",
+      "b": "FRA",
+      "valor": 50
+    },
+    {
+      "a": "TUN",
+      "b": "DZA",
+      "valor": -15
+    },
+    {
+      "a": "TUN",
+      "b": "MAR",
+      "valor": 30
+    },
+    {
+      "a": "SDN",
+      "b": "EGY",
+      "valor": -10
+    },
+    {
+      "a": "SDN",
+      "b": "ETH",
+      "valor": -20
+    },
+    {
+      "a": "AGO",
+      "b": "PRT",
+      "valor": 65
+    },
+    {
+      "a": "AGO",
+      "b": "ZAF",
+      "valor": 25
+    },
+    {
+      "a": "COD",
+      "b": "UGA",
+      "valor": -10
+    },
+    {
+      "a": "COD",
+      "b": "ZAF",
+      "valor": 15
+    },
+    {
+      "a": "CMR",
+      "b": "NGA",
+      "valor": 30
+    },
+    {
+      "a": "CMR",
+      "b": "FRA",
+      "valor": 35
+    },
+    {
+      "a": "CIV",
+      "b": "FRA",
+      "valor": 60
+    },
+    {
+      "a": "CIV",
+      "b": "SEN",
+      "valor": 40
+    },
+    {
+      "a": "SEN",
+      "b": "FRA",
+      "valor": 50
+    },
+    {
+      "a": "SEN",
+      "b": "MAR",
+      "valor": -10
+    },
+    {
+      "a": "UGA",
+      "b": "KEN",
+      "valor": 35
+    },
+    {
+      "a": "UGA",
+      "b": "ETH",
+      "valor": -15
+    },
+    {
+      "a": "MOZ",
+      "b": "PRT",
+      "valor": 55
+    },
+    {
+      "a": "MOZ",
+      "b": "ZAF",
+      "valor": 30
+    },
+    {
+      "a": "MDG",
+      "b": "FRA",
+      "valor": 45
+    },
+    {
+      "a": "ZMB",
+      "b": "ZAF",
+      "valor": 35
+    },
+    {
+      "a": "ZMB",
+      "b": "ZWE",
+      "valor": 40
+    },
+    {
+      "a": "SOM",
+      "b": "ETH",
+      "valor": -50
+    },
+    {
+      "a": "SOM",
+      "b": "KEN",
+      "valor": -10
+    },
+    {
+      "a": "MLI",
+      "b": "FRA",
+      "valor": 30
+    },
+    {
+      "a": "MLI",
+      "b": "SEN",
+      "valor": 25
+    },
+    {
+      "a": "NER",
+      "b": "FRA",
+      "valor": 35
+    },
+    {
+      "a": "NER",
+      "b": "NGA",
+      "valor": 25
+    },
+    {
+      "a": "BFA",
+      "b": "FRA",
+      "valor": 40
+    },
+    {
+      "a": "BFA",
+      "b": "CIV",
+      "valor": 20
+    },
+    {
+      "a": "TUR",
+      "b": "SAU",
+      "valor": -10
+    },
+    {
+      "a": "TUR",
+      "b": "IRN",
+      "valor": -20
+    },
+    {
+      "a": "SAU",
+      "b": "IRN",
+      "valor": -50
+    },
+    {
+      "a": "SAU",
+      "b": "EGY",
+      "valor": 25
+    },
+    {
+      "a": "EGY",
+      "b": "IRN",
+      "valor": -15
+    },
+    {
+      "a": "EGY",
+      "b": "TUR",
+      "valor": -10
+    },
+    {
+      "a": "ZAF",
+      "b": "NGA",
+      "valor": 20
+    },
+    {
+      "a": "AUS",
+      "b": "IDN",
+      "valor": 35
+    },
+    {
+      "a": "AUS",
+      "b": "VNM",
+      "valor": 30
+    },
+    {
+      "a": "JPN",
+      "b": "KOR",
+      "valor": 40
+    },
+    {
+      "a": "JPN",
+      "b": "AUS",
+      "valor": 55
+    },
+    {
+      "a": "KOR",
+      "b": "IDN",
+      "valor": 30
+    },
+    {
+      "a": "ITA",
+      "b": "PRT",
+      "valor": 50
+    },
+    {
+      "a": "ITA",
+      "b": "FRA",
+      "valor": 60
+    },
+    {
+      "a": "POL",
+      "b": "UKR",
+      "valor": 55
+    },
+    {
+      "a": "UKR",
+      "b": "POL",
+      "valor": 55
+    },
+    {
+      "a": "VNM",
+      "b": "CHN",
+      "valor": 15
+    }
+  ],
+  "tratados": [
+    {
+      "id": "tratado-otan-1949",
+      "tipo": "alianca",
+      "paises": [
+        "USA",
+        "DEU",
+        "FRA",
+        "GBR",
+        "PRT",
+        "ITA",
+        "POL",
+        "TUR",
+        "CAN"
+      ],
+      "inicio": "1949-04-04",
+      "rompido": false
+    },
+    {
+      "id": "tratado-rus-chn-2001",
+      "tipo": "nao_agressao",
+      "paises": [
+        "RUS",
+        "CHN"
+      ],
+      "inicio": "2001-07-16",
+      "rompido": false
+    },
+    {
+      "id": "tratado-cplp-1996",
+      "tipo": "comercio",
+      "paises": [
+        "BRA",
+        "PRT"
+      ],
+      "inicio": "1996-07-17",
+      "rompido": false
+    },
+    {
+      "id": "tratado-usmca-2020",
+      "tipo": "comercio",
+      "paises": [
+        "USA",
+        "CAN",
+        "MEX"
+      ],
+      "inicio": "2020-07-01",
+      "rompido": false
+    },
+    {
+      "id": "tratado-mercosul-1991",
+      "tipo": "comercio",
+      "paises": [
+        "BRA",
+        "ARG"
+      ],
+      "inicio": "1991-03-26",
+      "rompido": false
+    },
+    {
+      "id": "tratado-quad-2007",
+      "tipo": "nao_agressao",
+      "paises": [
+        "USA",
+        "JPN",
+        "IND",
+        "AUS"
+      ],
+      "inicio": "2007-05-24",
+      "rompido": false
+    },
+    {
+      "id": "tratado-ue-1957",
+      "tipo": "comercio",
+      "paises": [
+        "DEU",
+        "FRA",
+        "ITA",
+        "ESP",
+        "PRT",
+        "POL"
+      ],
+      "inicio": "1957-03-25",
+      "rompido": false
+    },
+    {
+      "id": "tratado-africani-2002",
+      "tipo": "comercio",
+      "paises": [
+        "ZAF",
+        "NGA",
+        "EGY"
+      ],
+      "inicio": "2002-07-09",
+      "rompido": false
+    },
+    {
+      "id": "tratado-asean-1967",
+      "tipo": "comercio",
+      "paises": [
+        "THA",
+        "PHL",
+        "IDN"
+      ],
+      "inicio": "1967-08-08",
+      "rompido": false
+    },
+    {
+      "id": "tratado-benelux-1944",
+      "tipo": "comercio",
+      "paises": [
+        "BEL",
+        "FRA",
+        "DEU"
+      ],
+      "inicio": "1944-09-05",
+      "rompido": false
+    },
+    {
+      "id": "tratado-abraao-2020",
+      "tipo": "nao_agressao",
+      "paises": [
+        "ISR",
+        "ARE",
+        "SAU"
+      ],
+      "inicio": "2020-09-15",
+      "rompido": false
+    },
+    {
+      "id": "tratado-pacto-andino-1969",
+      "tipo": "comercio",
+      "paises": [
+        "PER",
+        "CHL",
+        "COL"
+      ],
+      "inicio": "1969-05-26",
+      "rompido": false
+    }
+  ],
+  "guerras": [
+    {
+      "id": "guerra-rus-ucr-2022",
+      "agressor": "RUS",
+      "defensores": [
+        "UKR"
+      ],
+      "provinciasDisputa": [
+        "UKR-IEV"
+      ],
+      "frentes": [
+        {
+          "provinceId": "UKR-IEV",
+          "progresso": 30,
+          "ultimoDelta": 0
+        }
+      ],
+      "objetivo": "conquistar",
+      "estado": "ativa",
+      "inicio": "2022-02-24",
+      "indemnizacoes": 0,
+      "turnoFim": null
+    }
+  ]
+}
